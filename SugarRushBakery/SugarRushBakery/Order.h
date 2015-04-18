@@ -7,21 +7,23 @@
 //
 
 #import <Parse/Parse.h>
-
-@interface Order : PFObject <PFSubclassing>
+#import "User.h"
 
 typedef enum{
     custom,
     defined
 } orderType;
 
+@interface Order : PFObject <PFSubclassing>
 
+@property NSString *customer;
 @property orderType OrderType;
 @property NSString *description;
 @property BOOL verified;
 @property double price;
 @property NSString *date;
-//image
+@property PFFile *orderImage;
+
 
 
 @end

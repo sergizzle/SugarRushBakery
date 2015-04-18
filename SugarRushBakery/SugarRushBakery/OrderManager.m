@@ -42,36 +42,51 @@
 }
 
 
--(void)addOrderswithDate:(NSString *)date andDescription:(NSString *)description andVerified:(BOOL)verified andPrice:(double)price
+-(void)addOrderswithDate:(NSString *)date andDescription:(NSString *)description andVerified:(BOOL)verified andPrice:(double)price andImage:(PFFile*)orderImage andOrderType:(orderType) orderType
 {
     Order *toAdd = [Order object];
     toAdd.date = date;
     toAdd.description = description;
     toAdd.price = price;
     toAdd.verified = verified;
+    toAdd.orderImage = orderImage;
+    toAdd.OrderType = orderType;
+   
+        
     
+    User *currentUser = [[User alloc] init];
+    currentUser = [User currentUser];
+    
+    toAdd.customer = currentUser.username;
+    
+    if(!currentUser.ordersArray)
+    {
+        currentUser.ordersArray = [[NSMutableArray alloc]init];
+    }
+    
+    [currentUser.ordersArray addObject:toAdd];
+    
+    [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            [[NSNotificationCenter defaultCenter]
+             postNotificationName:@"ParseSaveComplete"
+             object:self];
+        } else {
+            
+        }
+    }];
     
     //save the object to Parse
     [toAdd saveInBackground];
+    
+  
+    
+    
     
     //add it to the local list
     [self.orderList addObject:toAdd];
 }
 
-//-(void)addOrderswithDate:(NSString *)date andDescription:(NSString *)description andVerified:(BOOL)verified
-//{
-//    Order *toAdd = [Order object];
-//    toAdd.date = date;
-//    toAdd.description = description;
-//    //toAdd.price = price;
-//    toAdd.verified = verified;
-//
-//
-//    //save the object to Parse
-//    [toAdd saveInBackground];
-//
-//    //add it to the local list
-//    [self.orderList addObject:toAdd];
-//}
+
 
 @end

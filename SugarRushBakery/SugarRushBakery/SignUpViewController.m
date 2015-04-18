@@ -53,10 +53,12 @@
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Missing Field!"
                                                             message:@"Make sure you enter a username, password, and email address!"
                                                            delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
     } else if (![password isEqual:confirmPassword]) {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Passwords Do Not Match!"
                                                             message:@"Plese reenter your password!"
                                                            delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
     } else {
         User *newUser = [User user];
         newUser.firstName = firstName;
@@ -67,11 +69,7 @@
         
         [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (error) {
-                //                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry!"]
-                //                                                    message:[error.userInfo objectForKey:@"error"]
-                //                                                    delegate:nil
-                //                                                    cancelButtonTitle:@"OK"
-                //                                                    otherButtonTitles:nil];
+            
                 UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry!"
                                                                     message:[error.userInfo objectForKey:@"error"]
                                                                    delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];

@@ -56,7 +56,6 @@
             else {
                 [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                     if (!error) {
-                        // NSLog(@"inside block: %@", currentUser.favoriteTeams);
                         [[NSNotificationCenter defaultCenter]
                          postNotificationName:@"ParseSaveComplete"
                          object:self];

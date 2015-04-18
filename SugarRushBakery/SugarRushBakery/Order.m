@@ -15,6 +15,8 @@
 @dynamic OrderType;
 @dynamic price;
 @dynamic date;
+@dynamic orderImage;
+@dynamic customer;
 
 + (NSString *)parseClassName {
     return @"Order";

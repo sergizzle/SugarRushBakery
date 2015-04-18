@@ -12,7 +12,7 @@
 #import "User.h"
 
 
-@interface CustomOrderViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface CustomOrderViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate,UIAlertViewDelegate>
 
 - (IBAction)selectImage:(id)sender;
 
