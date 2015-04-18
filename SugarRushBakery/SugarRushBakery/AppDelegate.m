@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Super Nova. All rights reserved.
 //
 
+#import <Parse/Parse.h>
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
@@ -16,6 +17,16 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [Parse enableLocalDatastore];
+    
+    // Initialize Parse.
+    [Parse setApplicationId:@"gkvrlxDxdKSXsF0LbndpQUeLaF56gmCiZkr3ck7f"
+                  clientKey:@"Ku9UWbBAjIZaDUHiOwhYo5JxxkBpNtoxClPsIpLC"];
+    
+    // [Optional] Track statistics around application opens.
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
     // Override point for customization after application launch.
     return YES;
 }
