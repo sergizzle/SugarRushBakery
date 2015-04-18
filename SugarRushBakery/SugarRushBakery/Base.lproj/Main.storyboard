@@ -139,6 +139,9 @@
                         <outlet property="signOutOutlet" destination="7TC-gh-cQq" id="E4T-hz-8ha"/>
                         <outlet property="signinOutlet" destination="PaF-ji-qWF" id="GEG-XZ-E9q"/>
                         <segue destination="kLE-DU-NA2" kind="push" identifier="signin" id="vvT-hi-gnM"/>
+                        <segue destination="TJT-7W-KM5" kind="push" identifier="Owner" id="ONw-y6-hG8"/>
+                        <segue destination="HY6-EV-SdQ" kind="push" identifier="contact" id="Pzo-Ix-jQL"/>
+                        <segue destination="BVF-oO-Ezl" kind="push" identifier="order" id="XFc-ve-r2s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -236,6 +239,251 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lnF-rr-Ozf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2092.5" y="589"/>
+        </scene>
+        <!--Application Owner View Controller-->
+        <scene sceneID="xMa-hj-Lzf">
+            <objects>
+                <viewController id="TJT-7W-KM5" customClass="ApplicationOwnerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N7V-oI-7sJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="4D5-yD-unb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fwi-Uo-MxE">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihD-zi-TLW">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Fulfilled Orders">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="261" y="126" width="104" height="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcY-1H-gF4">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="189" y="254" width="60" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="signOut:" destination="TJT-7W-KM5" eventType="touchUpInside" id="Yxi-zs-9iT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKI-Px-VjQ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Pending Orders">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="40" y="126" width="108" height="30"/>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ihD-zi-TLW"/>
+                                <exclude reference="rcY-1H-gF4"/>
+                                <exclude reference="LKI-Px-VjQ"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ihD-zi-TLW"/>
+                                <include reference="rcY-1H-gF4"/>
+                                <include reference="LKI-Px-VjQ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="gS7-6S-3ny"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bDw-pA-uZn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="942" y="1426"/>
+        </scene>
+        <!--Contact Us View Controller-->
+        <scene sceneID="ONe-wI-LZ2">
+            <objects>
+                <viewController id="HY6-EV-SdQ" customClass="ContactUsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="naW-pZ-7jT"/>
+                        <viewControllerLayoutGuide type="bottom" id="atF-f3-0Bk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BFd-oH-9wY">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wxr-Wc-f4s">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Email">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="139" y="169" width="122" height="69"/>
+                                </variation>
+                                <connections>
+                                    <action selector="email:" destination="HY6-EV-SdQ" eventType="touchUpInside" id="hFp-mp-dou"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Wxr-Wc-f4s"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Wxr-Wc-f4s"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="kcq-4x-awJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tle-Ca-54w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1648.5" y="1426"/>
+        </scene>
+        <!--Order View Controller-->
+        <scene sceneID="5Pr-Iw-XIb">
+            <objects>
+                <viewController id="BVF-oO-Ezl" customClass="OrderViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5ug-fq-x5b"/>
+                        <viewControllerLayoutGuide type="bottom" id="NEp-AA-DNh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u0F-zD-jXc">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qlh-rB-evs">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Premade Design">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="104" y="135" width="113" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="premadeButton:" destination="BVF-oO-Ezl" eventType="touchUpInside" id="POk-Ny-VR5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxS-tk-PwN">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Custom Design">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="251" y="135" width="106" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="customButton:" destination="BVF-oO-Ezl" eventType="touchUpInside" id="jU1-fG-q9e"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Qlh-rB-evs"/>
+                                <exclude reference="mxS-tk-PwN"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Qlh-rB-evs"/>
+                                <include reference="mxS-tk-PwN"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="ACs-zL-hST"/>
+                    <connections>
+                        <segue destination="4u5-63-q64" kind="push" identifier="customOrder" id="bM2-or-jyx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="09I-lg-XWl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2368.5" y="1406"/>
+        </scene>
+        <!--Custom Order View Controller-->
+        <scene sceneID="f9k-mY-kZa">
+            <objects>
+                <viewController id="4u5-63-q64" customClass="CustomOrderViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5FW-04-ZAr"/>
+                        <viewControllerLayoutGuide type="bottom" id="BYg-Gc-h9g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wXR-gV-MOv">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vWD-6m-obJ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="95" y="72" width="210" height="178"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwE-7n-iG8">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Select an Image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="145" y="258" width="111" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="selectImage:" destination="4u5-63-q64" eventType="touchUpInside" id="ZFe-PW-wd8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCv-Pf-gdC">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Submit Order">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="154" y="526" width="92" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="submitOrder:" destination="4u5-63-q64" eventType="touchUpInside" id="p6a-MA-qJ3"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Explanation of Requirements" translatesAutoresizingMaskIntoConstraints="NO" id="O4y-L7-mjP">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="342" width="368" height="176"/>
+                                </variation>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="vWD-6m-obJ"/>
+                                <exclude reference="bwE-7n-iG8"/>
+                                <exclude reference="YCv-Pf-gdC"/>
+                                <exclude reference="O4y-L7-mjP"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="vWD-6m-obJ"/>
+                                <include reference="bwE-7n-iG8"/>
+                                <include reference="YCv-Pf-gdC"/>
+                                <include reference="O4y-L7-mjP"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="n9e-mc-Dxh"/>
+                    <connections>
+                        <outlet property="descriptionField" destination="O4y-L7-mjP" id="F4p-QI-6Y9"/>
+                        <outlet property="imageView" destination="vWD-6m-obJ" id="zrN-Q8-NYC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RTf-OX-77r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3045" y="1406"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="H6T-ak-3CI">

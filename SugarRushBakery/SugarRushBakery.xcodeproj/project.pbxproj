@@ -34,6 +34,13 @@
 		7DA8D3ED1AE1F6E7003D2C91 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8D3EC1AE1F6E7003D2C91 /* SignInViewController.m */; };
 		7DA8D3F01AE1FAA0003D2C91 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8D3EF1AE1FAA0003D2C91 /* SignUpViewController.m */; };
 		7DA8D3F31AE1FE9C003D2C91 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8D3F21AE1FE9C003D2C91 /* User.m */; };
+		7DA8D3F61AE2167C003D2C91 /* ApplicationOwnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8D3F51AE2167C003D2C91 /* ApplicationOwnerViewController.m */; };
+		7DA8D3F91AE21C73003D2C91 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8D3F81AE21C73003D2C91 /* ContactUsViewController.m */; };
+		7DA8D3FB1AE21DE8003D2C91 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA8D3FA1AE21DE8003D2C91 /* MessageUI.framework */; };
+		7DA8D3FE1AE22434003D2C91 /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8D3FD1AE22434003D2C91 /* Order.m */; };
+		7DA8D4011AE22631003D2C91 /* OrderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8D4001AE22631003D2C91 /* OrderManager.m */; };
+		7DA8D4041AE22A14003D2C91 /* OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8D4031AE22A14003D2C91 /* OrderViewController.m */; };
+		7DA8D4071AE22AE4003D2C91 /* CustomOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8D4061AE22AE4003D2C91 /* CustomOrderViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +90,19 @@
 		7DA8D3EF1AE1FAA0003D2C91 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		7DA8D3F11AE1FE9C003D2C91 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		7DA8D3F21AE1FE9C003D2C91 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		7DA8D3F41AE2167C003D2C91 /* ApplicationOwnerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationOwnerViewController.h; sourceTree = "<group>"; };
+		7DA8D3F51AE2167C003D2C91 /* ApplicationOwnerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationOwnerViewController.m; sourceTree = "<group>"; };
+		7DA8D3F71AE21C73003D2C91 /* ContactUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactUsViewController.h; sourceTree = "<group>"; };
+		7DA8D3F81AE21C73003D2C91 /* ContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactUsViewController.m; sourceTree = "<group>"; };
+		7DA8D3FA1AE21DE8003D2C91 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		7DA8D3FC1AE22434003D2C91 /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
+		7DA8D3FD1AE22434003D2C91 /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
+		7DA8D3FF1AE22631003D2C91 /* OrderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderManager.h; sourceTree = "<group>"; };
+		7DA8D4001AE22631003D2C91 /* OrderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderManager.m; sourceTree = "<group>"; };
+		7DA8D4021AE22A14003D2C91 /* OrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderViewController.h; sourceTree = "<group>"; };
+		7DA8D4031AE22A14003D2C91 /* OrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderViewController.m; sourceTree = "<group>"; };
+		7DA8D4051AE22AE4003D2C91 /* CustomOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomOrderViewController.h; sourceTree = "<group>"; };
+		7DA8D4061AE22AE4003D2C91 /* CustomOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomOrderViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DA8D3FB1AE21DE8003D2C91 /* MessageUI.framework in Frameworks */,
 				7DA8D3DD1AE1EE19003D2C91 /* libsqlite3.dylib in Frameworks */,
 				7DA8D3DB1AE1EE0C003D2C91 /* libz.dylib in Frameworks */,
 				7DA8D3D91AE1EE01003D2C91 /* SystemConfiguration.framework in Frameworks */,
@@ -123,6 +144,7 @@
 		7DA8D3961AE1E793003D2C91 = {
 			isa = PBXGroup;
 			children = (
+				7DA8D3FA1AE21DE8003D2C91 /* MessageUI.framework */,
 				7DA8D3DC1AE1EE19003D2C91 /* libsqlite3.dylib */,
 				7DA8D3DA1AE1EE0C003D2C91 /* libz.dylib */,
 				7DA8D3D81AE1EE01003D2C91 /* SystemConfiguration.framework */,
@@ -155,14 +177,26 @@
 			children = (
 				7DA8D3A61AE1E793003D2C91 /* AppDelegate.h */,
 				7DA8D3A71AE1E793003D2C91 /* AppDelegate.m */,
+				7DA8D3F41AE2167C003D2C91 /* ApplicationOwnerViewController.h */,
+				7DA8D3F51AE2167C003D2C91 /* ApplicationOwnerViewController.m */,
+				7DA8D3F71AE21C73003D2C91 /* ContactUsViewController.h */,
+				7DA8D3F81AE21C73003D2C91 /* ContactUsViewController.m */,
+				7DA8D4051AE22AE4003D2C91 /* CustomOrderViewController.h */,
+				7DA8D4061AE22AE4003D2C91 /* CustomOrderViewController.m */,
+				7DA8D3FC1AE22434003D2C91 /* Order.h */,
+				7DA8D3FD1AE22434003D2C91 /* Order.m */,
+				7DA8D3FF1AE22631003D2C91 /* OrderManager.h */,
+				7DA8D4001AE22631003D2C91 /* OrderManager.m */,
+				7DA8D4021AE22A14003D2C91 /* OrderViewController.h */,
+				7DA8D4031AE22A14003D2C91 /* OrderViewController.m */,
 				7DA8D3EB1AE1F6E7003D2C91 /* SignInViewController.h */,
 				7DA8D3EC1AE1F6E7003D2C91 /* SignInViewController.m */,
-				7DA8D3F11AE1FE9C003D2C91 /* User.h */,
-				7DA8D3F21AE1FE9C003D2C91 /* User.m */,
 				7DA8D3EE1AE1FAA0003D2C91 /* SignUpViewController.h */,
 				7DA8D3EF1AE1FAA0003D2C91 /* SignUpViewController.m */,
 				7DA8D3A91AE1E793003D2C91 /* ViewController.h */,
 				7DA8D3AA1AE1E793003D2C91 /* ViewController.m */,
+				7DA8D3F11AE1FE9C003D2C91 /* User.h */,
+				7DA8D3F21AE1FE9C003D2C91 /* User.m */,
 				7DA8D3AC1AE1E793003D2C91 /* Main.storyboard */,
 				7DA8D3AF1AE1E793003D2C91 /* Images.xcassets */,
 				7DA8D3B11AE1E793003D2C91 /* LaunchScreen.xib */,
@@ -310,12 +344,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DA8D3FE1AE22434003D2C91 /* Order.m in Sources */,
 				7DA8D3ED1AE1F6E7003D2C91 /* SignInViewController.m in Sources */,
 				7DA8D3F01AE1FAA0003D2C91 /* SignUpViewController.m in Sources */,
+				7DA8D4041AE22A14003D2C91 /* OrderViewController.m in Sources */,
 				7DA8D3F31AE1FE9C003D2C91 /* User.m in Sources */,
+				7DA8D4011AE22631003D2C91 /* OrderManager.m in Sources */,
 				7DA8D3AB1AE1E793003D2C91 /* ViewController.m in Sources */,
+				7DA8D3F61AE2167C003D2C91 /* ApplicationOwnerViewController.m in Sources */,
+				7DA8D4071AE22AE4003D2C91 /* CustomOrderViewController.m in Sources */,
 				7DA8D3A81AE1E793003D2C91 /* AppDelegate.m in Sources */,
 				7DA8D3A51AE1E793003D2C91 /* main.m in Sources */,
+				7DA8D3F91AE21C73003D2C91 /* ContactUsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

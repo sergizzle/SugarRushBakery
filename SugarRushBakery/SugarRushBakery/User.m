@@ -10,6 +10,7 @@
 
 @implementation User
 
+@dynamic ordersArray;
 @dynamic firstName;
 @dynamic lastName;
 
@@ -24,5 +25,7 @@
 + (User *)currentUser {
     return (User *)[PFUser currentUser];
 }
+
+
 
 @end

@@ -26,6 +26,12 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     
+    if([[[User currentUser]username] isEqual:@"Sergizzle"])
+    {
+        [self performSegueWithIdentifier:@"Owner" sender:self];
+    }
+        
+        
     self.currentUserLabel.text = @"";
     self.signOutOutlet.hidden = YES;
     self.signinOutlet.hidden = NO;
@@ -69,11 +75,13 @@
 }
 
 - (IBAction)ContactButton:(id)sender {
+    [self   performSegueWithIdentifier:@"contact" sender:self];
 }
 
 - (IBAction)AboutUsButton:(id)sender {
 }
 
 - (IBAction)OrdersButton:(id)sender {
+    [self performSegueWithIdentifier:@"order" sender:self];
 }
 @end

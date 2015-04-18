@@ -64,7 +64,6 @@
                         
                     }
                 }];
-                
                 [self.navigationController popToRootViewControllerAnimated:YES];
             }
         }];
