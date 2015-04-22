@@ -42,15 +42,17 @@
 }
 
 
--(void)addOrderswithDate:(NSString *)date andDescription:(NSString *)description andVerified:(BOOL)verified andPrice:(double)price andImage:(PFFile*)orderImage andOrderType:(orderType) orderType
+-(void)addOrderswithDate:(NSString *)date andDescription:(NSString *)descriptions andVerified:(BOOL)verified andPrice:(double)price andImage:(PFFile*)orderImage andOrderType:(orderType) orderType andOrderTitle:(NSString *)orderTitle
 {
-    Order *toAdd = [Order object];
+    Order *toAdd = [[Order alloc] init];
+  //  Order *toAdd = [Order object];
     toAdd.date = date;
-    toAdd.description = description;
+    toAdd.descriptions = descriptions;
     toAdd.price = price;
     toAdd.verified = verified;
     toAdd.orderImage = orderImage;
     toAdd.OrderType = orderType;
+    toAdd.orderTitle = orderTitle;
    
         
     
@@ -78,9 +80,6 @@
     
     //save the object to Parse
     [toAdd saveInBackground];
-    
-  
-    
     
     
     //add it to the local list

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XWH-65-CzQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XWH-65-CzQ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -368,7 +369,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="104" y="135" width="113" height="30"/>
+                                    <rect key="frame" x="16" y="135" width="113" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="premadeButton:" destination="BVF-oO-Ezl" eventType="touchUpInside" id="POk-Ny-VR5"/>
@@ -380,10 +381,22 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="251" y="135" width="106" height="30"/>
+                                    <rect key="frame" x="278" y="135" width="106" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="customButton:" destination="BVF-oO-Ezl" eventType="touchUpInside" id="jU1-fG-q9e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61g-iU-tFK">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="My Orders">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="164" y="261" width="72" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="MyOrdersButton:" destination="BVF-oO-Ezl" eventType="touchUpInside" id="Q0A-sK-XmL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -392,23 +405,141 @@
                             <mask key="subviews">
                                 <exclude reference="Qlh-rB-evs"/>
                                 <exclude reference="mxS-tk-PwN"/>
+                                <exclude reference="61g-iU-tFK"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="Qlh-rB-evs"/>
                                 <include reference="mxS-tk-PwN"/>
+                                <include reference="61g-iU-tFK"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="ACs-zL-hST"/>
                     <connections>
                         <segue destination="4u5-63-q64" kind="push" identifier="customOrder" id="bM2-or-jyx"/>
+                        <segue destination="sTS-Jv-OUD" kind="push" identifier="myOrder" id="15Z-6t-ytw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="09I-lg-XWl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2368.5" y="1406"/>
+        </scene>
+        <!--My Orders View Controller-->
+        <scene sceneID="MxD-VW-6DC">
+            <objects>
+                <viewController id="sTS-Jv-OUD" customClass="MyOrdersViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UWr-oc-4Ef"/>
+                        <viewControllerLayoutGuide type="bottom" id="hTd-Md-OwV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zDr-vU-9PW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="CJK-zh-rX2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="orderCell" rowHeight="76" id="aQ7-m6-OUg" customClass="MyOrdersTableViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aQ7-m6-OUg" id="KH7-NG-zBc">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1Q-LQ-90N">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="8" y="9" width="384" height="21"/>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verified:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aea-sk-mLu">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="8" y="37" width="62" height="21"/>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IsVerified?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rxa-SN-dPe">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="78" y="38" width="198" height="21"/>
+                                                    </variation>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAr-yJ-wVz">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <state key="normal" title="Details">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="304" y="33" width="47" height="30"/>
+                                                    </variation>
+                                                    <connections>
+                                                        <action selector="detailsButton:" destination="aQ7-m6-OUg" eventType="touchUpInside" id="hR4-y8-Mp5"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="V1Q-LQ-90N"/>
+                                                    <exclude reference="aea-sk-mLu"/>
+                                                    <exclude reference="Rxa-SN-dPe"/>
+                                                    <exclude reference="PAr-yJ-wVz"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="V1Q-LQ-90N"/>
+                                                    <include reference="aea-sk-mLu"/>
+                                                    <include reference="Rxa-SN-dPe"/>
+                                                    <include reference="PAr-yJ-wVz"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="isVerifiedLabel" destination="Rxa-SN-dPe" id="WOh-du-UB6"/>
+                                            <outlet property="orderTitleLabel" destination="V1Q-LQ-90N" id="x67-jw-O3y"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="64" width="400" height="600"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="sTS-Jv-OUD" id="KE3-XF-zMP"/>
+                                    <outlet property="delegate" destination="sTS-Jv-OUD" id="gec-2r-nze"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="CJK-zh-rX2"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="CJK-zh-rX2"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="NCa-xB-kWM"/>
+                    <connections>
+                        <outlet property="myOrdersTableView" destination="CJK-zh-rX2" id="d5Y-1r-QXh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5zy-qB-UqT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2368.5" y="2151"/>
         </scene>
         <!--Custom Order View Controller-->
         <scene sceneID="f9k-mY-kZa">
@@ -452,7 +583,7 @@
                                     <action selector="submitOrder:" destination="4u5-63-q64" eventType="touchUpInside" id="p6a-MA-qJ3"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Explanation of Requirements" translatesAutoresizingMaskIntoConstraints="NO" id="O4y-L7-mjP">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description" translatesAutoresizingMaskIntoConstraints="NO" id="O4y-L7-mjP">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -461,6 +592,14 @@
                                     <rect key="frame" x="16" y="342" width="368" height="176"/>
                                 </variation>
                             </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Order Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0QV-zX-Yv8">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="304" width="368" height="30"/>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.88452740090000004" blue="0.93421303739999995" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -469,6 +608,7 @@
                                 <exclude reference="bwE-7n-iG8"/>
                                 <exclude reference="YCv-Pf-gdC"/>
                                 <exclude reference="O4y-L7-mjP"/>
+                                <exclude reference="0QV-zX-Yv8"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -477,6 +617,7 @@
                                 <include reference="bwE-7n-iG8"/>
                                 <include reference="YCv-Pf-gdC"/>
                                 <include reference="O4y-L7-mjP"/>
+                                <include reference="0QV-zX-Yv8"/>
                             </mask>
                         </variation>
                     </view>
@@ -484,6 +625,7 @@
                     <connections>
                         <outlet property="descriptionField" destination="O4y-L7-mjP" id="F4p-QI-6Y9"/>
                         <outlet property="imageView" destination="vWD-6m-obJ" id="zrN-Q8-NYC"/>
+                        <outlet property="orderTitle" destination="0QV-zX-Yv8" id="deV-m2-Ff8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTf-OX-77r" userLabel="First Responder" sceneMemberID="firstResponder"/>

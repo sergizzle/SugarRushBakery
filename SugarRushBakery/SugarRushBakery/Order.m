@@ -11,12 +11,13 @@
 @implementation Order
 
 @dynamic verified;
-@dynamic description;
+@dynamic descriptions;
 @dynamic OrderType;
 @dynamic price;
 @dynamic date;
 @dynamic orderImage;
 @dynamic customer;
+@dynamic orderTitle;
 
 + (NSString *)parseClassName {
     return @"Order";
@@ -25,6 +26,11 @@
 + (void)initialize {
     [super initialize];
     [self registerSubclass];
+}
+
+-(NSString *)description
+{
+    return @"Order";
 }
 
 @end

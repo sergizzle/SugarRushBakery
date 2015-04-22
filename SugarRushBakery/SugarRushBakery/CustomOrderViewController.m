@@ -103,6 +103,7 @@
         
         
         NSString *tempString = self.descriptionField.text;
+        NSString *ordertitle = self.orderTitle.text;
         
         
         //Get the date of the transaction
@@ -119,7 +120,7 @@
         
         
         
-        [self.manager addOrderswithDate:currentDate andDescription:tempString andVerified:NO andPrice:0 andImage:orderImage andOrderType:0];
+        [self.manager addOrderswithDate:currentDate andDescription:tempString andVerified:NO andPrice:0 andImage:orderImage andOrderType:0 andOrderTitle:ordertitle];
         
         [self.navigationController popToRootViewControllerAnimated:YES];
         

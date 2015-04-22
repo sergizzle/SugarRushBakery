@@ -22,4 +22,6 @@
 
 - (IBAction)submitOrder:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UITextField *orderTitle;
+
 @end

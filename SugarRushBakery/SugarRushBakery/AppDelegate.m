@@ -8,6 +8,7 @@
 
 #import <Parse/Parse.h>
 #import "AppDelegate.h"
+#import "Order.h"
 
 @interface AppDelegate ()
 
@@ -26,6 +27,9 @@
     
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    //Parse Magic Sauce (Faucon)
+    [Order initialize];
     
     // Override point for customization after application launch.
     return YES;

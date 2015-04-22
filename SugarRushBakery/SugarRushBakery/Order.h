@@ -18,11 +18,12 @@ typedef enum{
 
 @property NSString *customer;
 @property orderType OrderType;
-@property NSString *description;
+@property NSString *descriptions;
 @property BOOL verified;
 @property double price;
 @property NSString *date;
 @property PFFile *orderImage;
+@property NSString *orderTitle;
 
 
 
