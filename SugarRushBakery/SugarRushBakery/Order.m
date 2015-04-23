@@ -16,8 +16,8 @@
 @dynamic price;
 @dynamic date;
 @dynamic orderImage;
-@dynamic customer;
 @dynamic orderTitle;
+@dynamic thisUser;
 
 + (NSString *)parseClassName {
     return @"Order";
@@ -28,9 +28,9 @@
     [self registerSubclass];
 }
 
--(NSString *)description
-{
-    return @"Order";
-}
+//-(NSString *)description
+//{
+//    return @"Order";
+//}
 
 @end

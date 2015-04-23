@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D5525D11AE8869A007030A5 /* OrderInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5525D01AE8869A007030A5 /* OrderInfoViewController.m */; };
 		7D9227621AE32FA400A1FE97 /* MyOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D9227611AE32FA400A1FE97 /* MyOrdersViewController.m */; };
 		7D9227651AE334B600A1FE97 /* MyOrdersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D9227641AE334B600A1FE97 /* MyOrdersTableViewCell.m */; };
 		7D9227671AE3495A00A1FE97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D9227661AE3495A00A1FE97 /* Main.storyboard */; };
@@ -56,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D5525CF1AE8869A007030A5 /* OrderInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderInfoViewController.h; sourceTree = "<group>"; };
+		7D5525D01AE8869A007030A5 /* OrderInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderInfoViewController.m; sourceTree = "<group>"; };
 		7D9227601AE32FA400A1FE97 /* MyOrdersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOrdersViewController.h; sourceTree = "<group>"; };
 		7D9227611AE32FA400A1FE97 /* MyOrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyOrdersViewController.m; sourceTree = "<group>"; };
 		7D9227631AE334B600A1FE97 /* MyOrdersTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOrdersTableViewCell.h; sourceTree = "<group>"; };
@@ -196,6 +199,8 @@
 				7D9227641AE334B600A1FE97 /* MyOrdersTableViewCell.m */,
 				7DA8D3FC1AE22434003D2C91 /* Order.h */,
 				7DA8D3FD1AE22434003D2C91 /* Order.m */,
+				7D5525CF1AE8869A007030A5 /* OrderInfoViewController.h */,
+				7D5525D01AE8869A007030A5 /* OrderInfoViewController.m */,
 				7DA8D3FF1AE22631003D2C91 /* OrderManager.h */,
 				7DA8D4001AE22631003D2C91 /* OrderManager.m */,
 				7DA8D4021AE22A14003D2C91 /* OrderViewController.h */,
@@ -366,6 +371,7 @@
 				7DA8D4071AE22AE4003D2C91 /* CustomOrderViewController.m in Sources */,
 				7DA8D3A81AE1E793003D2C91 /* AppDelegate.m in Sources */,
 				7DA8D3A51AE1E793003D2C91 /* main.m in Sources */,
+				7D5525D11AE8869A007030A5 /* OrderInfoViewController.m in Sources */,
 				7D9227651AE334B600A1FE97 /* MyOrdersTableViewCell.m in Sources */,
 				7DA8D3F91AE21C73003D2C91 /* ContactUsViewController.m in Sources */,
 			);

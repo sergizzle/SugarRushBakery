@@ -12,5 +12,7 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *orderTitleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *isVerifiedLabel;
-- (IBAction)detailsButton:(id)sender;
+
+@property (strong, nonatomic) IBOutlet UIImageView *orderPicture;
+
 @end

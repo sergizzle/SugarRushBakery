@@ -15,6 +15,7 @@
 @synthesize isVerifiedLabel = _isVerifiedLabel;
 
 
+
 - (void)awakeFromNib {
     // Initialization code
 }
@@ -25,6 +26,5 @@
     // Configure the view for the selected state
 }
 
-- (IBAction)detailsButton:(id)sender {
-}
+
 @end

@@ -12,9 +12,12 @@
 #import "Order.h"
 #import "OrderManager.h"
 #import "OrderViewController.h"
+#import "OrderInfoViewController.h"
 
 @interface MyOrdersViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet UITableView *myOrdersTableView;
 
-@property NSArray *thisOrderArray;
+@property Order *myOrder;
+@property NSMutableArray *thisOrderArray;
+@property UIImage *picture;
 @end

@@ -10,7 +10,7 @@
 
 @interface MyOrdersViewController ()
 
-@property Order *thisOrder;
+
 
 
 @end
@@ -65,9 +65,23 @@
     
   
     Order *order = [self.thisOrderArray objectAtIndex:indexPath.row];
-
+   
     
-   // cell.orderTitleLabel.text = order.orderTitle;
+    [order fetchIfNeeded];
+    PFFile *file = order.orderImage;
+   
+   
+    
+    [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        if(!error) {
+            UIImage *image = [UIImage imageWithData:data];
+            cell.orderPicture.image = image;
+        }
+    }];
+ 
+    
+    cell.orderTitleLabel.text = order.orderTitle;
+    
     if(!order.verified)
     {
         cell.isVerifiedLabel.text = @"In Process";
@@ -77,15 +91,35 @@
         cell.isVerifiedLabel.text = @"Processed";
     }
     
-    
+   
   
-    cell.orderTitleLabel.text = order.descriptions;
     
-    
-    User *currentUser = [User currentUser];
     
     
     return cell;
+}
+
+
+
+#pragma mark segue stuff
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.myOrder = [self.thisOrderArray objectAtIndex:indexPath.row];
+    //self.picture = cell.orderPicture.image;
+    [self performSegueWithIdentifier:@"cellSegue" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([[segue identifier] isEqualToString:@"cellSegue"]) {
+        
+        OrderInfoViewController *dest = [segue destinationViewController];
+        dest.finalOrder = self.myOrder;
+        dest.picture1 = self.picture;
+     
+    }
 }
 
 @end

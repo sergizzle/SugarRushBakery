@@ -44,8 +44,8 @@
 
 -(void)addOrderswithDate:(NSString *)date andDescription:(NSString *)descriptions andVerified:(BOOL)verified andPrice:(double)price andImage:(PFFile*)orderImage andOrderType:(orderType) orderType andOrderTitle:(NSString *)orderTitle
 {
-    Order *toAdd = [[Order alloc] init];
-  //  Order *toAdd = [Order object];
+  //  Order *toAdd = [[Order alloc] init];
+    Order *toAdd = [Order object];
     toAdd.date = date;
     toAdd.descriptions = descriptions;
     toAdd.price = price;
@@ -53,13 +53,15 @@
     toAdd.orderImage = orderImage;
     toAdd.OrderType = orderType;
     toAdd.orderTitle = orderTitle;
+    
    
         
     
     User *currentUser = [[User alloc] init];
     currentUser = [User currentUser];
+    //toAdd.thisUser = currentUser;
     
-    toAdd.customer = currentUser.username;
+
     
     if(!currentUser.ordersArray)
     {

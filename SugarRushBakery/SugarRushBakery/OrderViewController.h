@@ -16,7 +16,7 @@
 
 @interface OrderViewController : UIViewController
 
-@property NSArray *myOrdersArray;
+@property NSMutableArray *myOrdersArray;
 
 - (IBAction)premadeButton:(id)sender;
 - (IBAction)customButton:(id)sender;

@@ -16,7 +16,7 @@ typedef enum{
 
 @interface Order : PFObject <PFSubclassing>
 
-@property NSString *customer;
+
 @property orderType OrderType;
 @property NSString *descriptions;
 @property BOOL verified;
@@ -24,7 +24,7 @@ typedef enum{
 @property NSString *date;
 @property PFFile *orderImage;
 @property NSString *orderTitle;
-
+@property User *thisUser;
 
 
 @end

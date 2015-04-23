@@ -81,6 +81,14 @@
 }
 
 - (IBAction)OrdersButton:(id)sender {
-    [self performSegueWithIdentifier:@"order" sender:self];
+    if(![User currentUser])
+    {
+        NSLog(@"hi");
+    }
+    else
+    {
+        [self performSegueWithIdentifier:@"order" sender:self];
+    }
+    
 }
 @end

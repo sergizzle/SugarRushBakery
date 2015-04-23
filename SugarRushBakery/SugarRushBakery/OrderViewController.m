@@ -21,25 +21,33 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.manager = [[OrderManager alloc]init];
-    if(!self.myOrdersArray) self.myOrdersArray = [[NSArray alloc]init];
+    if(!self.myOrdersArray) self.myOrdersArray = [[NSMutableArray alloc]init];
+   
     
     //Load orders from parse
-    [self.manager loadOrdersWithCompletionBlock:^(NSArray *objects) {
-        
-        self.myOrdersArray = self.manager.orderList;
-        User *currentUser = [User currentUser];
-        
-//        for(id order in self.myOrdersArray)
-//        {
-//            if([currentUser.username isEqual:(Order*)order).customer]);
-//            {
-//                [self.myOrdersArray addObject:order];
-//            }
-//        }
-        
-        
-    }];
+//    [self.manager loadOrdersWithCompletionBlock:^(NSArray *objects) {
+//        
+//        self.myOrdersArray = self.manager.orderList;
+//   
+//        
+////        for(id order in self.myOrdersArray)
+////        {
+////            if([currentUser.username isEqual:(Order*)order).customer]);
+////            {
+////                [self.myOrdersArray addObject:order];
+////            }
+////        }
+//        
+//        
+//    }];
     
+}
+
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    User *currentUser = [User currentUser];
+    self.myOrdersArray = currentUser.ordersArray;
 }
 
 - (void)didReceiveMemoryWarning {
