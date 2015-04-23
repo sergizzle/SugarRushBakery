@@ -47,7 +47,7 @@
     Order *toAdd = [Order object];
     toAdd.date = date;
     toAdd.descriptions = descriptions;
-\    toAdd.price = price;
+    toAdd.price = price;
     toAdd.verified = verified;
     toAdd.orderImage = orderImage;
     toAdd.OrderType = orderType;
