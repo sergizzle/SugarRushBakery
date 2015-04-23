@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     [self viewWillAppear:YES];
     
  
@@ -24,13 +25,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    
-    if([[[User currentUser]username] isEqual:@"Sergizzle"])
-    {
-        [self performSegueWithIdentifier:@"Owner" sender:self];
-    }
-        
-        
+    self.admin.hidden = YES;
     self.currentUserLabel.text = @"";
     self.signOutOutlet.hidden = YES;
     self.signinOutlet.hidden = NO;
@@ -43,6 +38,12 @@
         NSString *name = [[User currentUser] username];
 
         self.currentUserLabel.text = [NSString stringWithFormat:@"Welcome %@", name];
+        
+        //Admin button shows
+        if([[[User currentUser]username] isEqual:@"Sergizzle"])
+        {
+            self.admin.hidden = NO;
+        }
     }
     
 }
@@ -103,6 +104,10 @@
         [self performSegueWithIdentifier:@"order" sender:self];
     }
     
+}
+
+- (IBAction)admin:(id)sender {
+    [self performSegueWithIdentifier:@"Owner" sender:self];
 }
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {

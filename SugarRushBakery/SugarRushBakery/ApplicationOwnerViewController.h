@@ -8,9 +8,17 @@
 
 #import "User.h"
 #import <UIKit/UIKit.h>
+#import "OrderManager.h"
+#import "AllOrdersViewController.h"
 
 
 @interface ApplicationOwnerViewController : UIViewController
+
+@property OrderManager *manager;
+@property NSMutableArray *ordersArray;
+
+- (IBAction)ordersButton:(id)sender;
+
 - (IBAction)signOut:(id)sender;
 
 @end

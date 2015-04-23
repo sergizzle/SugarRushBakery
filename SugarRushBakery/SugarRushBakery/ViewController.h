@@ -15,6 +15,7 @@
 //Outlets
 @property (strong, nonatomic) IBOutlet UIButton *signinOutlet;
 @property (strong, nonatomic) IBOutlet UIButton *signOutOutlet;
+@property (strong, nonatomic) IBOutlet UIButton *admin;
 
 //Labels
 
@@ -27,6 +28,7 @@
 - (IBAction)ContactButton:(id)sender;
 - (IBAction)AboutUsButton:(id)sender;
 - (IBAction)OrdersButton:(id)sender;
+- (IBAction)admin:(id)sender;
 
 @end
 
