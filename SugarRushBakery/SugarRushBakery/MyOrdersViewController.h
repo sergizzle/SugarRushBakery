@@ -19,5 +19,6 @@
 
 @property Order *myOrder;
 @property NSMutableArray *thisOrderArray;
-@property UIImage *picture;
+@property NSInteger number;
+
 @end

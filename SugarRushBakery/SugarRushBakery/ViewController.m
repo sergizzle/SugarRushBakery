@@ -61,6 +61,14 @@
     [PFUser logOut];
 
     self.signinOutlet.hidden = NO;
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success"
+                                                    message:@"You are signed out."
+                                                   delegate:self
+                                          cancelButtonTitle:@"Ok"
+                                          otherButtonTitles:nil];
+    [alert show];
+    
     [self viewWillAppear:YES];
 
 }
@@ -83,7 +91,12 @@
 - (IBAction)OrdersButton:(id)sender {
     if(![User currentUser])
     {
-        NSLog(@"hi");
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                        message:@"You must first sign in."
+                                                       delegate:self
+                                              cancelButtonTitle:@"Cancel"
+                                              otherButtonTitles:@"Sign In", nil];
+        [alert show];
     }
     else
     {
@@ -91,4 +104,13 @@
     }
     
 }
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    // the user clicked OK
+    if (buttonIndex == 1) {
+        [self   performSegueWithIdentifier:@"signin" sender:self];
+        
+    }
+}
+
 @end

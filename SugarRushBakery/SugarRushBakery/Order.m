@@ -17,7 +17,7 @@
 @dynamic date;
 @dynamic orderImage;
 @dynamic orderTitle;
-@dynamic thisUser;
+@dynamic userID;
 
 + (NSString *)parseClassName {
     return @"Order";

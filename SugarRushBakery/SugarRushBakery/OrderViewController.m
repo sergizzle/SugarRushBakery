@@ -61,11 +61,11 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     //Link the object from 1st to 2nd controller
-    if ([[segue identifier] isEqualToString:@"myOrder"])
-    {
-        MyOrdersViewController *dest = [segue destinationViewController];
-        dest.thisOrderArray = self.myOrdersArray;
-    }
+//    if ([[segue identifier] isEqualToString:@"myOrder"])
+//    {
+//        MyOrdersViewController *dest = [segue destinationViewController];
+//        dest.thisOrderArray = self.myOrdersArray;
+//    }
 }
 
 

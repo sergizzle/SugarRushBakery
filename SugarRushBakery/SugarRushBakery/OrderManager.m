@@ -59,7 +59,7 @@
     
     User *currentUser = [[User alloc] init];
     currentUser = [User currentUser];
-    //toAdd.thisUser = currentUser;
+    toAdd.userID = currentUser.objectId;
     
 
     

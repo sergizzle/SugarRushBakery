@@ -24,7 +24,7 @@ typedef enum{
 @property NSString *date;
 @property PFFile *orderImage;
 @property NSString *orderTitle;
-@property User *thisUser;
+@property NSString *userID;
 
 
 @end

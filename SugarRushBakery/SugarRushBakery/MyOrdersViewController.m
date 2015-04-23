@@ -23,11 +23,12 @@
    
 }
 
+
 -(void)viewWillAppear:(BOOL)animated
 {
-//    User *currentUser = [User currentUser];
-//    self.thisOrderArray = currentUser.ordersArray;
-//    [self.myOrdersTableView reloadData];
+    User *currentUser = [User currentUser];
+    self.thisOrderArray = currentUser.ordersArray;
+    [self.myOrdersTableView reloadData];
     
 }
 
@@ -90,11 +91,7 @@
     {
         cell.isVerifiedLabel.text = @"Processed";
     }
-    
-   
-  
-    
-    
+
     
     return cell;
 }
@@ -106,8 +103,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     self.myOrder = [self.thisOrderArray objectAtIndex:indexPath.row];
-    //self.picture = cell.orderPicture.image;
+    self.number = indexPath.row;
     [self performSegueWithIdentifier:@"cellSegue" sender:self];
 }
 
@@ -117,7 +115,7 @@
         
         OrderInfoViewController *dest = [segue destinationViewController];
         dest.finalOrder = self.myOrder;
-        dest.picture1 = self.picture;
+        dest.number1 = self.number;
      
     }
 }

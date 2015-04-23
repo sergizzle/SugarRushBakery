@@ -12,7 +12,8 @@
 @interface OrderInfoViewController : ViewController
 
 @property Order *finalOrder;
-@property UIImage *picture1;
+@property NSInteger number1;
+
 
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 
