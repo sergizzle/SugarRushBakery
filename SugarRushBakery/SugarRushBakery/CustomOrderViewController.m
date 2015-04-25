@@ -14,6 +14,7 @@
 
 @property OrderManager *manager;
 
+
 @end
 
 
@@ -24,6 +25,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
      self.manager = [[OrderManager alloc] init];
+    self.descriptionField.delegate = self;
+    self.orderTitle.delegate = self;
+  
     
     // Do any additional setup after loading the view.
 }
@@ -35,7 +39,82 @@
 
 
 
+#pragma mark - These methods are to hide keyboard and show it
+- (BOOL)textViewShouldReturn:(UITextView *)textView {
+    [textView resignFirstResponder];
+    return NO;
+}
 
+//Hide keyboard by touching background
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
+}
+
+
+
+//Declare a delegate, assign your textField to the delegate and then include these methods   :textfield
+
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
+    return YES;
+}
+
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
+    
+    [self.view endEditing:YES];
+    return YES;
+}
+
+//Declare a delegate, assign your textField to the delegate and then include these methods :textview
+
+-(BOOL)textViewShouldBeginEditing:(UITextView *)textView {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
+    return YES;
+}
+
+
+- (BOOL)textViewShouldEndEditing:(UITextView *)textView {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
+    
+    [self.view endEditing:YES];
+    return YES;
+}
+
+
+- (void)keyboardDidShow:(NSNotification *)notification
+{
+    // Assign new frame to your view
+    [self.view setFrame:CGRectMake(0,-110,320,460)]; //here taken -20 for example i.e. your view will be scrolled to -20. change its value according to your requirement.
+    
+}
+
+-(void)keyboardDidHide:(NSNotification *)notification
+{
+    [self.view setFrame:CGRectMake(0,0,320,460)];
+}
+
+-(void)Orderplaced
+{
+    UIAlertView *confirmed = [[UIAlertView alloc] initWithTitle:@"Congratulations"
+                                                        message:@"Your order has been placed."
+                                                       delegate:self
+                                              cancelButtonTitle:@"Ok"
+                                              otherButtonTitles:nil];
+    confirmed.tag = 1;
+    
+    
+    [confirmed show];
+    
+    
+}
 
 - (IBAction)selectImage:(id)sender {
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum]) {
@@ -90,8 +169,11 @@
                                           cancelButtonTitle:@"Cancel"
                                           otherButtonTitles:@"Ok", nil];
     [alert show];
+        
+      
+        
+        
     }
-    
     
     
 }
@@ -106,12 +188,7 @@
         NSString *ordertitle = self.orderTitle.text;
         
         
-        //Get the date of the transaction
-        NSString *currentDate;
-        NSDate *currentTime = [NSDate date];
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"hh:mm   dd/MM/yyyy"];
-        currentDate = [dateFormatter stringFromDate:currentTime];
+        NSDate *pickerDate = self.dueDate.date;
         
         NSData *imageData = UIImagePNGRepresentation(self.imageView.image);
         PFFile *orderImage =[PFFile fileWithName:@"OrderImage" data:imageData];
@@ -120,18 +197,16 @@
         
         
         
-        [self.manager addOrderswithDate:currentDate andDescription:tempString andVerified:NO andPrice:0 andImage:orderImage andOrderType:0 andOrderTitle:ordertitle];
-        
-        [self.navigationController popToRootViewControllerAnimated:YES];
-        
-        UIAlertView *confirmed = [[UIAlertView alloc] initWithTitle:@"Congratulations"
-                                                        message:@"Your order has been placed."
-                                                       delegate:self
-                                              cancelButtonTitle:@"Ok"
-                                              otherButtonTitles:nil];
-        [confirmed show];
-
+        [self.manager addOrderswithDate:pickerDate andDescription:tempString andVerified:NO andPrice:0 andImage:orderImage andOrderType:0 andOrderTitle:ordertitle];
+  
+        [self Orderplaced];
 
     }
+    
+    if(alertView.tag == 1)
+    {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
 }
+
 @end

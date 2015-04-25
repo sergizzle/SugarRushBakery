@@ -17,12 +17,55 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.firstNameField.delegate = self;
+    self.lastNameField.delegate = self;
+    self.usernameField.delegate = self;
+    self.emailAddressField.delegate = self;
+    self.passwordField.delegate = self;
+    self.confirmPasswordField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+
+#pragma mark - These methods are to hide keyboard and show it
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
+}
+
+
+
+//Declare a delegate, assign your textField to the delegate and then include these methods
+
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
+    return YES;
+}
+
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
+    
+    [self.view endEditing:YES];
+    return YES;
+}
+
+
+- (void)keyboardDidShow:(NSNotification *)notification
+{
+    // Assign new frame to your view
+    [self.view setFrame:CGRectMake(0,-110,320,460)]; //here taken -20 for example i.e. your view will be scrolled to -20. change its value according to your requirement.
+    
+}
+
+-(void)keyboardDidHide:(NSNotification *)notification
+{
+    [self.view setFrame:CGRectMake(0,0,320,460)];
 }
 
 /*
@@ -34,6 +77,8 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - sign in stuff
 
 - (IBAction)signUp:(id)sender {
     NSString *firstName = [self.firstNameField.text stringByTrimmingCharactersInSet:
@@ -79,6 +124,9 @@
             }
         }];
     }
-
 }
+
+
+
+
 @end

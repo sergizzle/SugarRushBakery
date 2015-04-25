@@ -12,7 +12,8 @@
 #import "User.h"
 
 
-@interface CustomOrderViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate,UIAlertViewDelegate>
+
+@interface CustomOrderViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate,UIAlertViewDelegate, UITextViewDelegate, UITextFieldDelegate>
 
 - (IBAction)selectImage:(id)sender;
 
@@ -23,5 +24,7 @@
 - (IBAction)submitOrder:(id)sender;
 
 @property (strong, nonatomic) IBOutlet UITextField *orderTitle;
+
+@property (strong, nonatomic) IBOutlet UIDatePicker *dueDate;
 
 @end

@@ -69,6 +69,8 @@
    
     
     [order fetchIfNeeded];
+    
+    
     PFFile *file = order.orderImage;
    
    

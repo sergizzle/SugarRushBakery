@@ -16,6 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //hide keyboard
+    self.usernameField.delegate = self;
+    self.passwordField.delegate = self;
+    
     // Do any additional setup after loading the view.
 }
 
@@ -24,15 +28,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+
+//Return hides keyboard
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
 }
-*/
+
+#pragma mark - Sign in parse function
 
 - (IBAction)login:(id)sender {
     NSString *username = [self.usernameField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
@@ -76,4 +81,9 @@
      [self   performSegueWithIdentifier:@"signup" sender:self];
    
 }
+
+
+
+
+
 @end

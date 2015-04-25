@@ -21,10 +21,10 @@ typedef enum{
 @property NSString *descriptions;
 @property BOOL verified;
 @property double price;
-@property NSString *date;
+@property NSDate *dueDate;
 @property PFFile *orderImage;
 @property NSString *orderTitle;
 @property NSString *userID;
-
+@property NSString *userName;
 
 @end

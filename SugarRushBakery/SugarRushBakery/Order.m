@@ -14,10 +14,11 @@
 @dynamic descriptions;
 @dynamic OrderType;
 @dynamic price;
-@dynamic date;
+@dynamic dueDate;
 @dynamic orderImage;
 @dynamic orderTitle;
 @dynamic userID;
+@dynamic userName;
 
 + (NSString *)parseClassName {
     return @"Order";

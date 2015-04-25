@@ -51,7 +51,33 @@
     [order fetchIfNeeded];
     PFFile *file = order.orderImage;
     
+  
     
+//    //Find the user that placed the order
+//    PFQuery *query = [PFQuery queryWithClassName:@"User"];
+//    [query findObjectsInBackgroundWithBlock:^(NSArray *users, NSError *error) {
+//        if (!error)
+//        {
+//            for (User *user in users)
+//            {
+//                if ([user.objectId isEqual:order.objectId])
+//                {
+//                    cell.orderTitleLabel.text = user.username;
+//                }
+//            }
+//        }
+//        else
+//        {
+//            NSLog(@"%@",error);
+//        }
+//        
+//    }];
+    
+
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"hh:mm   dd/MM/yyyy"];
+    
+    cell.orderTitleLabel.text = [dateFormatter stringFromDate:order.dueDate];
     
     [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         if(!error) {
@@ -61,16 +87,18 @@
     }];
     
     
-    cell.orderTitleLabel.text = order.orderTitle;
+   
     
-    if(!order.verified)
-    {
-        cell.isVerifiedLabel.text = @"In Process";
-    }
-    else
-    {
-        cell.isVerifiedLabel.text = @"Processed";
-    }
+//    if(!order.verified)
+//    {
+//        cell.isVerifiedLabel.text = @"In Process";
+//    }
+//    else
+//    {
+//        cell.isVerifiedLabel.text = @"Processed";
+//    }
+    
+    cell.isVerifiedLabel.text = order.userName;
     
     
     return cell;

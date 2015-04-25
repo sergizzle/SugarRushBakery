@@ -12,7 +12,7 @@
 
 
 //Text fields
-@interface SignUpViewController : UIViewController
+@interface SignUpViewController : UIViewController <UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *firstNameField;
 @property (strong, nonatomic) IBOutlet UITextField *lastNameField;
 @property (strong, nonatomic) IBOutlet UITextField *usernameField;

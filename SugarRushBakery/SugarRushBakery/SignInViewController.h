@@ -9,7 +9,7 @@
 #import "User.h"
 #import <UIKit/UIKit.h>
 
-@interface SignInViewController : UIViewController
+@interface SignInViewController : UIViewController <UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *usernameField;
 
 @property (strong, nonatomic) IBOutlet UITextField *passwordField;

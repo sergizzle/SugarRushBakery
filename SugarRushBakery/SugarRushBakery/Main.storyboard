@@ -23,7 +23,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="84" y="408" width="48" height="30"/>
+                                    <rect key="frame" x="16" y="321" width="48" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="GalleryButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ITm-Vz-zwx"/>
@@ -35,7 +35,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.8683909407" green="0.78270700395904158" blue="0.2875643344184195" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="88" y="228" width="224" height="21"/>
+                                    <rect key="frame" x="16" y="228" width="224" height="21"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bC-NN-lWy">
@@ -44,7 +44,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="234" y="408" width="55" height="30"/>
+                                    <rect key="frame" x="133" y="321" width="55" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="ContactButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="arT-dJ-nYf"/>
@@ -56,7 +56,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="76" y="469" width="64" height="30"/>
+                                    <rect key="frame" x="16" y="379" width="64" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="AboutUsButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="iQT-7U-q5x"/>
@@ -68,7 +68,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="313" y="103" width="48" height="30"/>
+                                    <rect key="frame" x="176" y="110" width="48" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="SignInButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4gh-Fi-fFA"/>
@@ -80,7 +80,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="238" y="469" width="47" height="30"/>
+                                    <rect key="frame" x="133" y="379" width="47" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="OrdersButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ESh-I1-oUx"/>
@@ -92,21 +92,12 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="170" y="514" width="60" height="30"/>
+                                    <rect key="frame" x="78" y="425" width="60" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="signOutButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sKA-ZW-OIM"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="current User" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TtZ-ac-vGZ">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="32" y="153" width="329" height="21"/>
-                                </variation>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0b-F5-weD">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Admin">
@@ -119,6 +110,15 @@
                                     <action selector="admin:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6LR-1D-Iuf"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="current User" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TtZ-ac-vGZ">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="22" y="148" width="329" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.88452740090000004" blue="0.93421303739999995" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -130,8 +130,8 @@
                                 <exclude reference="PaF-ji-qWF"/>
                                 <exclude reference="kF7-GL-tFA"/>
                                 <exclude reference="7TC-gh-cQq"/>
-                                <exclude reference="TtZ-ac-vGZ"/>
                                 <exclude reference="Y0b-F5-weD"/>
+                                <exclude reference="TtZ-ac-vGZ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -143,8 +143,8 @@
                                 <include reference="PaF-ji-qWF"/>
                                 <include reference="kF7-GL-tFA"/>
                                 <include reference="7TC-gh-cQq"/>
-                                <include reference="TtZ-ac-vGZ"/>
                                 <include reference="Y0b-F5-weD"/>
+                                <include reference="TtZ-ac-vGZ"/>
                             </mask>
                         </variation>
                     </view>
@@ -181,7 +181,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="72" y="99" width="257" height="30"/>
+                                    <rect key="frame" x="37" y="98" width="257" height="30"/>
                                 </variation>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcQ-Dm-Rtk">
@@ -190,22 +190,10 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="175" y="233" width="51" height="30"/>
+                                    <rect key="frame" x="140" y="233" width="51" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="login:" destination="kLE-DU-NA2" eventType="touchUpInside" id="mmr-B3-pgZ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hW-0P-389">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="SIGN UP!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="173" y="386" width="66" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="signup:" destination="kLE-DU-NA2" eventType="touchUpInside" id="qNe-Om-vMW"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoL-ug-GIi">
@@ -214,7 +202,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="111" y="357" width="183" height="21"/>
+                                    <rect key="frame" x="74" y="349" width="183" height="21"/>
                                 </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xXK-WN-qrh">
@@ -222,27 +210,39 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="72" y="165" width="257" height="30"/>
+                                    <rect key="frame" x="37" y="163" width="257" height="30"/>
                                 </variation>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hW-0P-389">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="SIGN UP!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="140" y="393" width="66" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="signup:" destination="kLE-DU-NA2" eventType="touchUpInside" id="qNe-Om-vMW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="6Mt-QX-MBg"/>
                                 <exclude reference="AcQ-Dm-Rtk"/>
-                                <exclude reference="5hW-0P-389"/>
                                 <exclude reference="xoL-ug-GIi"/>
                                 <exclude reference="xXK-WN-qrh"/>
+                                <exclude reference="5hW-0P-389"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="6Mt-QX-MBg"/>
                                 <include reference="AcQ-Dm-Rtk"/>
-                                <include reference="5hW-0P-389"/>
                                 <include reference="xoL-ug-GIi"/>
                                 <include reference="xXK-WN-qrh"/>
+                                <include reference="5hW-0P-389"/>
                             </mask>
                         </variation>
                     </view>
@@ -323,6 +323,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Jz6-Ks-os3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="adk-cE-0QK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="y8a-QZ-1zx">
@@ -394,7 +395,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="-5" y="64" width="400" height="600"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
                                 </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="epL-a2-i7W" id="kfB-an-BnO"/>
@@ -442,7 +443,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="139" y="169" width="122" height="69"/>
+                                    <rect key="frame" x="70" y="153" width="122" height="69"/>
                                 </variation>
                                 <connections>
                                     <action selector="email:" destination="HY6-EV-SdQ" eventType="touchUpInside" id="hFp-mp-dou"/>
@@ -497,7 +498,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="278" y="135" width="106" height="30"/>
+                                    <rect key="frame" x="192" y="135" width="106" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="customButton:" destination="BVF-oO-Ezl" eventType="touchUpInside" id="jU1-fG-q9e"/>
@@ -509,7 +510,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="164" y="261" width="72" height="30"/>
+                                    <rect key="frame" x="123" y="173" width="72" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="MyOrdersButton:" destination="BVF-oO-Ezl" eventType="touchUpInside" id="Q0A-sK-XmL"/>
@@ -623,7 +624,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="64" width="400" height="600"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="664"/>
                                 </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="sTS-Jv-OUD" id="KE3-XF-zMP"/>
@@ -680,18 +681,6 @@
                                     <rect key="frame" x="16" y="101" width="230" height="230"/>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wU1-eQ-BYZ">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Cancel Order">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="260" y="68" width="91" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="cancelOrderButton:" destination="oWy-70-blV" eventType="touchUpInside" id="eV3-Nj-qUn"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hmc-l0-qua">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Pay Now">
@@ -714,24 +703,36 @@
                                     <rect key="frame" x="16" y="339" width="335" height="162"/>
                                 </variation>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wU1-eQ-BYZ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Cancel Order">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="161" y="68" width="91" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="cancelOrderButton:" destination="oWy-70-blV" eventType="touchUpInside" id="eV3-Nj-qUn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="uea-0w-2xU"/>
                                 <exclude reference="3YT-03-oIO"/>
-                                <exclude reference="wU1-eQ-BYZ"/>
                                 <exclude reference="Hmc-l0-qua"/>
                                 <exclude reference="mql-VV-AZT"/>
+                                <exclude reference="wU1-eQ-BYZ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="uea-0w-2xU"/>
                                 <include reference="3YT-03-oIO"/>
-                                <include reference="wU1-eQ-BYZ"/>
                                 <include reference="Hmc-l0-qua"/>
                                 <include reference="mql-VV-AZT"/>
+                                <include reference="wU1-eQ-BYZ"/>
                             </mask>
                         </variation>
                     </view>
@@ -763,7 +764,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vWD-6m-obJ">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="-6" y="72" width="406" height="178"/>
+                                    <rect key="frame" x="0.0" y="64" width="130" height="130"/>
                                 </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwE-7n-iG8">
@@ -772,22 +773,10 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="145" y="258" width="111" height="30"/>
+                                    <rect key="frame" x="135" y="64" width="111" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="selectImage:" destination="4u5-63-q64" eventType="touchUpInside" id="ZFe-PW-wd8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCv-Pf-gdC">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Submit Order">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="154" y="526" width="92" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="submitOrder:" destination="4u5-63-q64" eventType="touchUpInside" id="p6a-MA-qJ3"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description" translatesAutoresizingMaskIntoConstraints="NO" id="O4y-L7-mjP">
@@ -796,7 +785,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="342" width="368" height="176"/>
+                                    <rect key="frame" x="9" y="202" width="237" height="93"/>
                                 </variation>
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Order Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0QV-zX-Yv8">
@@ -804,33 +793,57 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="304" width="368" height="30"/>
+                                    <rect key="frame" x="135" y="96" width="111" height="30"/>
                                 </variation>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCv-Pf-gdC">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Submit Order">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="138" y="134" width="92" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="submitOrder:" destination="4u5-63-q64" eventType="touchUpInside" id="p6a-MA-qJ3"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="JfY-W3-y7c">
+                                <rect key="frame" x="-160" y="-81" width="320" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="451622534.33980101">
+                                    <!--2015-04-25 02:42:14 +0000-->
+                                </date>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="9" y="303" width="237" height="133"/>
+                                </variation>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.88452740090000004" blue="0.93421303739999995" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="vWD-6m-obJ"/>
                                 <exclude reference="bwE-7n-iG8"/>
-                                <exclude reference="YCv-Pf-gdC"/>
                                 <exclude reference="O4y-L7-mjP"/>
                                 <exclude reference="0QV-zX-Yv8"/>
+                                <exclude reference="YCv-Pf-gdC"/>
+                                <exclude reference="JfY-W3-y7c"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="vWD-6m-obJ"/>
                                 <include reference="bwE-7n-iG8"/>
-                                <include reference="YCv-Pf-gdC"/>
                                 <include reference="O4y-L7-mjP"/>
                                 <include reference="0QV-zX-Yv8"/>
+                                <include reference="YCv-Pf-gdC"/>
+                                <include reference="JfY-W3-y7c"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="n9e-mc-Dxh"/>
                     <connections>
                         <outlet property="descriptionField" destination="O4y-L7-mjP" id="F4p-QI-6Y9"/>
+                        <outlet property="dueDate" destination="JfY-W3-y7c" id="per-DK-bHh"/>
                         <outlet property="imageView" destination="vWD-6m-obJ" id="zrN-Q8-NYC"/>
                         <outlet property="orderTitle" destination="0QV-zX-Yv8" id="deV-m2-Ff8"/>
                     </connections>
@@ -856,7 +869,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="94" y="223" width="234" height="30"/>
+                                    <rect key="frame" x="32" y="223" width="234" height="30"/>
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yVy-w6-GU3">
@@ -864,7 +877,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="94" y="299" width="234" height="30"/>
+                                    <rect key="frame" x="32" y="299" width="234" height="30"/>
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qLQ-hG-DXK">
@@ -872,7 +885,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="94" y="261" width="234" height="30"/>
+                                    <rect key="frame" x="32" y="261" width="234" height="30"/>
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mSK-SE-Pgg">
@@ -880,7 +893,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="32" y="185" width="160" height="30"/>
+                                    <rect key="frame" x="32" y="185" width="108" height="30"/>
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1s5-Rv-9bc">
@@ -888,7 +901,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="208" y="185" width="160" height="30"/>
+                                    <rect key="frame" x="158" y="185" width="108" height="30"/>
                                 </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcH-6V-xYU">
@@ -897,29 +910,29 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="134" y="77" width="133" height="86"/>
+                                    <rect key="frame" x="86" y="72" width="133" height="86"/>
                                 </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qYB-Og-o4c">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="94" y="337" width="234" height="30"/>
-                                </variation>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foO-UB-Ypt">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="SIGN UP">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="169" y="431" width="62" height="30"/>
+                                    <rect key="frame" x="121" y="422" width="62" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="signUp:" destination="yNQ-ew-S7h" eventType="touchUpInside" id="fob-IO-4a6"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qYB-Og-o4c">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="32" y="337" width="234" height="30"/>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -930,8 +943,8 @@
                                 <exclude reference="mSK-SE-Pgg"/>
                                 <exclude reference="1s5-Rv-9bc"/>
                                 <exclude reference="YcH-6V-xYU"/>
-                                <exclude reference="qYB-Og-o4c"/>
                                 <exclude reference="foO-UB-Ypt"/>
+                                <exclude reference="qYB-Og-o4c"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -942,8 +955,8 @@
                                 <include reference="mSK-SE-Pgg"/>
                                 <include reference="1s5-Rv-9bc"/>
                                 <include reference="YcH-6V-xYU"/>
-                                <include reference="qYB-Og-o4c"/>
                                 <include reference="foO-UB-Ypt"/>
+                                <include reference="qYB-Og-o4c"/>
                             </mask>
                         </variation>
                     </view>
