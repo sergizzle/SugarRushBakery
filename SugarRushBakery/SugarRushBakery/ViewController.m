@@ -19,7 +19,83 @@
 
     [self viewWillAppear:YES];
     
- 
+    //BISCUITS
+    self.biscuitImages = [[NSMutableArray alloc] init];
+    self.biscuitImagePaths = [[NSMutableArray alloc] init];
+    NSArray *biscuits = [[NSBundle mainBundle]pathsForResourcesOfType:@"jpg" inDirectory:@"Biscuits"];
+    if (biscuits) {
+        [self.biscuitImagePaths addObjectsFromArray:biscuits];
+    }
+    for(NSString *imagePath in self.biscuitImagePaths) {
+        [self.biscuitImages addObject:[UIImage imageWithContentsOfFile:imagePath]];
+    }
+    
+    //CAKEPOPS
+    self.cakepopImages = [[NSMutableArray alloc] init];
+    self.cakepopImagePaths = [[NSMutableArray alloc] init];
+    NSArray *cakepops = [[NSBundle mainBundle]pathsForResourcesOfType:@"jpg" inDirectory:@"Cakepops"];
+    if (cakepops) {
+        [self.cakepopImagePaths addObjectsFromArray:cakepops];
+    }
+    for(NSString *imagePath in self.cakepopImagePaths) {
+        [self.cakepopImages addObject:[UIImage imageWithContentsOfFile:imagePath]];
+    }
+    
+    //CAKES
+    self.cakeImages = [[NSMutableArray alloc] init];
+    self.cakeImagePaths = [[NSMutableArray alloc] init];
+    NSArray *cakes = [[NSBundle mainBundle]pathsForResourcesOfType:@"jpg" inDirectory:@"Cakes"];
+    if (cakes) {
+        [self.cakeImagePaths addObjectsFromArray:cakes];
+    }
+    for(NSString *imagePath in self.cakeImagePaths) {
+        [self.cakeImages addObject:[UIImage imageWithContentsOfFile:imagePath]];
+    }
+    
+    //CHOCOLATES
+    self.chocolateImages = [[NSMutableArray alloc] init];
+    self.chocolateImagePaths = [[NSMutableArray alloc] init];
+    NSArray *chocolates = [[NSBundle mainBundle]pathsForResourcesOfType:@"jpg" inDirectory:@"Chocolate"];
+    if (chocolates) {
+        [self.chocolateImagePaths addObjectsFromArray:chocolates];
+    }
+    for(NSString *imagePath in self.chocolateImagePaths) {
+        [self.chocolateImages addObject:[UIImage imageWithContentsOfFile:imagePath]];
+    }
+    
+    //COOKIES
+    self.cookieImages = [[NSMutableArray alloc] init];
+    self.cookieImagePaths = [[NSMutableArray alloc] init];
+    NSArray *cookies = [[NSBundle mainBundle]pathsForResourcesOfType:@"jpg" inDirectory:@"Cookies"];
+    if (cookies) {
+        [self.cookieImagePaths addObjectsFromArray:cookies];
+    }
+    for(NSString *imagePath in self.cookieImagePaths) {
+        [self.cookieImages addObject:[UIImage imageWithContentsOfFile:imagePath]];
+    }
+    
+    //CUPCAKES
+    self.cupcakeImages = [[NSMutableArray alloc] init];
+    self.cupcakeImagePaths = [[NSMutableArray alloc] init];
+    NSArray *cupcakes = [[NSBundle mainBundle]pathsForResourcesOfType:@"jpg" inDirectory:@"Cupcakes"];
+    if (cupcakes) {
+        [self.cupcakeImagePaths addObjectsFromArray:cupcakes];
+    }
+    for(NSString *imagePath in self.cupcakeImagePaths) {
+        [self.cupcakeImages addObject:[UIImage imageWithContentsOfFile:imagePath]];
+    }
+    
+    //FLOWERS
+    self.flowerImages = [[NSMutableArray alloc] init];
+    self.flowerImagePaths = [[NSMutableArray alloc] init];
+    NSArray *flowers = [[NSBundle mainBundle]pathsForResourcesOfType:@"jpg" inDirectory:@"Flowers"];
+    if (flowers) {
+        [self.flowerImagePaths addObjectsFromArray:flowers];
+    }
+    for(NSString *imagePath in self.flowerImagePaths) {
+        [self.flowerImages addObject:[UIImage imageWithContentsOfFile:imagePath]];
+    }
+
 
 }
 
@@ -80,6 +156,7 @@
 }
 
 - (IBAction)GalleryButton:(id)sender {
+    [self   performSegueWithIdentifier:@"gallerySegue" sender:self];
 }
 
 - (IBAction)ContactButton:(id)sender {
@@ -114,6 +191,30 @@
     // the user clicked OK
     if (buttonIndex == 1) {
         [self   performSegueWithIdentifier:@"signin" sender:self];
+        
+    }
+}
+
+//@property NSMutableArray *biscuitImages;
+//@property NSMutableArray *cakeImages;
+//@property NSMutableArray *cakepopImages;
+//@property NSMutableArray *chocolateImages;
+//@property NSMutableArray *cookieImages;
+//@property NSMutableArray *cupcakeImages;
+//@property NSMutableArray *flowerImages;
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([[segue identifier] isEqualToString:@"gallerySegue"]) {
+        
+        GalleryViewController *dest = [segue destinationViewController];
+        dest.biscuitImages = self.biscuitImages;
+        dest.cakeImages = self.cakeImages;
+        dest.cakepopImages = self.cakepopImages;
+        dest.chocolateImages = self.chocolateImages;
+        dest.cookieImages = self.cookieImages;
+        dest.cupcakeImages = self.cupcakeImages;
+        dest.flowerImages = self.flowerImages;
         
     }
 }

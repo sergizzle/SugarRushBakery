@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		7D5525D11AE8869A007030A5 /* OrderInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5525D01AE8869A007030A5 /* OrderInfoViewController.m */; };
+		7D919CEF1AEC59D60067E9CE /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D919CEE1AEC59D60067E9CE /* GalleryViewController.m */; };
+		7D919CF11AEC5F170067E9CE /* Biscuits in Resources */ = {isa = PBXBuildFile; fileRef = 7D919CF01AEC5F170067E9CE /* Biscuits */; };
+		7D919CF31AEC5F260067E9CE /* Cakepops in Resources */ = {isa = PBXBuildFile; fileRef = 7D919CF21AEC5F260067E9CE /* Cakepops */; };
+		7D919CF51AEC5F2F0067E9CE /* Cakes in Resources */ = {isa = PBXBuildFile; fileRef = 7D919CF41AEC5F2F0067E9CE /* Cakes */; };
+		7D919CF71AEC5F370067E9CE /* Chocolate in Resources */ = {isa = PBXBuildFile; fileRef = 7D919CF61AEC5F370067E9CE /* Chocolate */; };
+		7D919CF91AEC5F410067E9CE /* Cookies in Resources */ = {isa = PBXBuildFile; fileRef = 7D919CF81AEC5F410067E9CE /* Cookies */; };
+		7D919CFB1AEC5F470067E9CE /* Cupcakes in Resources */ = {isa = PBXBuildFile; fileRef = 7D919CFA1AEC5F470067E9CE /* Cupcakes */; };
+		7D919CFD1AEC5F4F0067E9CE /* Flowers in Resources */ = {isa = PBXBuildFile; fileRef = 7D919CFC1AEC5F4F0067E9CE /* Flowers */; };
+		7D919CFF1AEC5F570067E9CE /* Paloma in Resources */ = {isa = PBXBuildFile; fileRef = 7D919CFE1AEC5F570067E9CE /* Paloma */; };
+		7D919D021AEC6DC00067E9CE /* GalleryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D919D011AEC6DC00067E9CE /* GalleryTableViewCell.m */; };
 		7D9227621AE32FA400A1FE97 /* MyOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D9227611AE32FA400A1FE97 /* MyOrdersViewController.m */; };
 		7D9227651AE334B600A1FE97 /* MyOrdersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D9227641AE334B600A1FE97 /* MyOrdersTableViewCell.m */; };
 		7D9227671AE3495A00A1FE97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D9227661AE3495A00A1FE97 /* Main.storyboard */; };
@@ -67,6 +77,18 @@
 /* Begin PBXFileReference section */
 		7D5525CF1AE8869A007030A5 /* OrderInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderInfoViewController.h; sourceTree = "<group>"; };
 		7D5525D01AE8869A007030A5 /* OrderInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderInfoViewController.m; sourceTree = "<group>"; };
+		7D919CED1AEC59D60067E9CE /* GalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryViewController.h; sourceTree = "<group>"; };
+		7D919CEE1AEC59D60067E9CE /* GalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryViewController.m; sourceTree = "<group>"; };
+		7D919CF01AEC5F170067E9CE /* Biscuits */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Biscuits; sourceTree = "<group>"; };
+		7D919CF21AEC5F260067E9CE /* Cakepops */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Cakepops; sourceTree = "<group>"; };
+		7D919CF41AEC5F2F0067E9CE /* Cakes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Cakes; sourceTree = "<group>"; };
+		7D919CF61AEC5F370067E9CE /* Chocolate */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Chocolate; sourceTree = "<group>"; };
+		7D919CF81AEC5F410067E9CE /* Cookies */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Cookies; sourceTree = "<group>"; };
+		7D919CFA1AEC5F470067E9CE /* Cupcakes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Cupcakes; sourceTree = "<group>"; };
+		7D919CFC1AEC5F4F0067E9CE /* Flowers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Flowers; sourceTree = "<group>"; };
+		7D919CFE1AEC5F570067E9CE /* Paloma */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Paloma; sourceTree = "<group>"; };
+		7D919D001AEC6DC00067E9CE /* GalleryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryTableViewCell.h; sourceTree = "<group>"; };
+		7D919D011AEC6DC00067E9CE /* GalleryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryTableViewCell.m; sourceTree = "<group>"; };
 		7D9227601AE32FA400A1FE97 /* MyOrdersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOrdersViewController.h; sourceTree = "<group>"; };
 		7D9227611AE32FA400A1FE97 /* MyOrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyOrdersViewController.m; sourceTree = "<group>"; };
 		7D9227631AE334B600A1FE97 /* MyOrdersTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOrdersTableViewCell.h; sourceTree = "<group>"; };
@@ -184,6 +206,14 @@
 		7DA8D3961AE1E793003D2C91 = {
 			isa = PBXGroup;
 			children = (
+				7D919CFE1AEC5F570067E9CE /* Paloma */,
+				7D919CFC1AEC5F4F0067E9CE /* Flowers */,
+				7D919CFA1AEC5F470067E9CE /* Cupcakes */,
+				7D919CF81AEC5F410067E9CE /* Cookies */,
+				7D919CF61AEC5F370067E9CE /* Chocolate */,
+				7D919CF41AEC5F2F0067E9CE /* Cakes */,
+				7D919CF21AEC5F260067E9CE /* Cakepops */,
+				7D919CF01AEC5F170067E9CE /* Biscuits */,
 				7DA8D3FA1AE21DE8003D2C91 /* MessageUI.framework */,
 				7DA8D3DC1AE1EE19003D2C91 /* libsqlite3.dylib */,
 				7DA8D3DA1AE1EE0C003D2C91 /* libz.dylib */,
@@ -228,6 +258,10 @@
 				7DA8D3F81AE21C73003D2C91 /* ContactUsViewController.m */,
 				7DA8D4051AE22AE4003D2C91 /* CustomOrderViewController.h */,
 				7DA8D4061AE22AE4003D2C91 /* CustomOrderViewController.m */,
+				7D919D001AEC6DC00067E9CE /* GalleryTableViewCell.h */,
+				7D919D011AEC6DC00067E9CE /* GalleryTableViewCell.m */,
+				7D919CED1AEC59D60067E9CE /* GalleryViewController.h */,
+				7D919CEE1AEC59D60067E9CE /* GalleryViewController.m */,
 				7D9227601AE32FA400A1FE97 /* MyOrdersViewController.h */,
 				7D9227611AE32FA400A1FE97 /* MyOrdersViewController.m */,
 				7D9227631AE334B600A1FE97 /* MyOrdersTableViewCell.h */,
@@ -375,12 +409,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D919CF51AEC5F2F0067E9CE /* Cakes in Resources */,
+				7D919CF11AEC5F170067E9CE /* Biscuits in Resources */,
 				7D982F101AE9A59A0073479F /* Icon-40@3x copy.png in Resources */,
 				7D982F111AE9A59A0073479F /* Icon-60@2x copy.png in Resources */,
 				7D9227671AE3495A00A1FE97 /* Main.storyboard in Resources */,
 				7D982F121AE9A59A0073479F /* Icon-60@3x copy.png in Resources */,
 				7D982F0F1AE9A59A0073479F /* Icon-40@2x copy.png in Resources */,
+				7D919CFF1AEC5F570067E9CE /* Paloma in Resources */,
+				7D919CF71AEC5F370067E9CE /* Chocolate in Resources */,
+				7D919CF31AEC5F260067E9CE /* Cakepops in Resources */,
+				7D919CFD1AEC5F4F0067E9CE /* Flowers in Resources */,
 				7D982F131AE9A59A0073479F /* Icon-Small@2x copy.png in Resources */,
+				7D919CF91AEC5F410067E9CE /* Cookies in Resources */,
+				7D919CFB1AEC5F470067E9CE /* Cupcakes in Resources */,
 				7DA8D3B31AE1E793003D2C91 /* LaunchScreen.xib in Resources */,
 				7D982F141AE9A59A0073479F /* Icon-Small@3x copy.png in Resources */,
 				7DA8D3B01AE1E793003D2C91 /* Images.xcassets in Resources */,
@@ -418,6 +460,8 @@
 				7D5525D11AE8869A007030A5 /* OrderInfoViewController.m in Sources */,
 				7D9227651AE334B600A1FE97 /* MyOrdersTableViewCell.m in Sources */,
 				7DA8D3F91AE21C73003D2C91 /* ContactUsViewController.m in Sources */,
+				7D919D021AEC6DC00067E9CE /* GalleryTableViewCell.m in Sources */,
+				7D919CEF1AEC59D60067E9CE /* GalleryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

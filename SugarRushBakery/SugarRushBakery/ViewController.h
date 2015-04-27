@@ -9,6 +9,7 @@
 #import <Parse/Parse.h>
 #import <UIKit/UIKit.h>
 #import "User.h"
+#import "GalleryViewController.h"
 
 @interface ViewController : UIViewController
 
@@ -29,6 +30,22 @@
 - (IBAction)AboutUsButton:(id)sender;
 - (IBAction)OrdersButton:(id)sender;
 - (IBAction)admin:(id)sender;
+
+@property NSMutableArray *biscuitImages;
+@property NSMutableArray *cakeImages;
+@property NSMutableArray *cakepopImages;
+@property NSMutableArray *chocolateImages;
+@property NSMutableArray *cookieImages;
+@property NSMutableArray *cupcakeImages;
+@property NSMutableArray *flowerImages;
+
+@property NSMutableArray *biscuitImagePaths;
+@property NSMutableArray *cakeImagePaths;
+@property NSMutableArray *cakepopImagePaths;
+@property NSMutableArray *chocolateImagePaths;
+@property NSMutableArray *cookieImagePaths;
+@property NSMutableArray *cupcakeImagePaths;
+@property NSMutableArray *flowerImagePaths;
 
 @end
 

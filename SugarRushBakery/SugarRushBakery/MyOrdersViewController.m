@@ -26,6 +26,8 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    self.automaticallyAdjustsScrollViewInsets = NO;
+
     User *currentUser = [User currentUser];
     self.thisOrderArray = currentUser.ordersArray;
     [self.myOrdersTableView reloadData];

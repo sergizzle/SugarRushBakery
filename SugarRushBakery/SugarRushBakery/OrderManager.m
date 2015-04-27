@@ -73,7 +73,7 @@
              postNotificationName:@"ParseSaveComplete"
              object:self];
         } else {
-            
+            NSLog(@"SAVE IN BACKGROUND ERROR");
         }
     }];
     

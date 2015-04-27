@@ -75,7 +75,7 @@
     
 
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"hh:mm   dd/MM/yyyy"];
+    [dateFormatter setDateFormat:@"hh:mm a  MM/dd/yyyy"];
     
     cell.orderTitleLabel.text = [dateFormatter stringFromDate:order.dueDate];
     
