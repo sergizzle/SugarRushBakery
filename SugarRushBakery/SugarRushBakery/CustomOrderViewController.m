@@ -101,20 +101,20 @@
     [self.view setFrame:CGRectMake(0,0,320,460)];
 }
 
--(void)Orderplaced
-{
-    UIAlertView *confirmed = [[UIAlertView alloc] initWithTitle:@"Congratulations"
-                                                        message:@"Your order has been placed."
-                                                       delegate:self
-                                              cancelButtonTitle:@"Ok"
-                                              otherButtonTitles:nil];
-    confirmed.tag = 1;
-    
-    
-    [confirmed show];
-    
-    
-}
+//-(void)Orderplaced
+//{
+//    UIAlertView *confirmed = [[UIAlertView alloc] initWithTitle:@"Congratulations"
+//                                                        message:@"Your order has been placed."
+//                                                       delegate:self
+//                                              cancelButtonTitle:@"Ok"
+//                                              otherButtonTitles:nil];
+//    confirmed.tag = 1;
+//    
+//    
+//    [confirmed show];
+//    
+//    
+//}
 
 - (IBAction)selectImage:(id)sender {
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum]) {
@@ -199,14 +199,13 @@
         
         [self.manager addOrderswithDate:pickerDate andDescription:tempString andVerified:NO andPrice:0 andImage:orderImage andOrderType:0 andOrderTitle:ordertitle];
   
-        [self Orderplaced];
+        //[self Orderplaced];
+         [self.navigationController popToRootViewControllerAnimated:YES];
 
     }
     
-    if(alertView.tag == 1)
-    {
-        [self.navigationController popToRootViewControllerAnimated:YES];
-    }
+    
+    
 }
 
 @end

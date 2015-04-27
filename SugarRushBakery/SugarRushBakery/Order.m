@@ -19,6 +19,7 @@
 @dynamic orderTitle;
 @dynamic userID;
 @dynamic userName;
+@dynamic email;
 
 + (NSString *)parseClassName {
     return @"Order";

@@ -8,10 +8,17 @@
 
 #import "ViewController.h"
 #import "ApplicationOwnerViewController.h"
-#import "MyOrdersTableViewCell.h"
+#import "AllOrdersTableViewCell.h"
+#import "AdminOrderViewController.h"
 
 @interface AllOrdersViewController : ViewController <UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet UITableView *ordersTable;
 @property NSMutableArray *thisOrderArray;
+
+@property OrderManager *manager;
+@property Order *thisOrder;
+@property NSInteger number;
+
+
 
 @end

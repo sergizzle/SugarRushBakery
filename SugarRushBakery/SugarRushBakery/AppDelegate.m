@@ -31,8 +31,8 @@
     //Parse Magic Sauce (Faucon)
     [Order initialize];
     
-   [PFUser enableRevocableSessionInBackground];
-    
+  
+    [PFUser enableRevocableSessionInBackground];
 
     
     // Override point for customization after application launch.

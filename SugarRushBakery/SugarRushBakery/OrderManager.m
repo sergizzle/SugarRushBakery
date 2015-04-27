@@ -57,6 +57,7 @@
     currentUser = [User currentUser];
     toAdd.userID = currentUser.objectId;
     toAdd.userName = currentUser.username;
+    toAdd.email = currentUser.email;
     
 
     
@@ -72,8 +73,22 @@
             [[NSNotificationCenter defaultCenter]
              postNotificationName:@"ParseSaveComplete"
              object:self];
+            
+            UIAlertView *confirmed = [[UIAlertView alloc] initWithTitle:@"Congratulations"
+                                                                message:@"Your order has been placed."
+                                                               delegate:self
+                                                      cancelButtonTitle:@"Ok"
+                                                      otherButtonTitles:nil];
+            confirmed.tag =1;
+            [confirmed show];
+            
         } else {
-            NSLog(@"SAVE IN BACKGROUND ERROR");
+            UIAlertView *wrong = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                message:@"Order was not placed correctly."
+                                                               delegate:self
+                                                      cancelButtonTitle:@"Ok"
+                                                      otherButtonTitles:nil];
+            [wrong show];
         }
     }];
     

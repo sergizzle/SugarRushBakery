@@ -331,7 +331,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="orderCell" rowHeight="76" id="x5J-7C-XwQ" customClass="MyOrdersTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="orderCell" rowHeight="76" id="x5J-7C-XwQ" customClass="AllOrdersTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x5J-7C-XwQ" id="tsI-AY-foN">
@@ -346,52 +346,41 @@
                                                         <rect key="frame" x="91" y="8" width="384" height="21"/>
                                                     </variation>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ws-nR-OaD">
-                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <variation key="widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="91" y="37" width="55" height="21"/>
-                                                    </variation>
-                                                </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7vi-Qz-nwA">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                     <variation key="widthClass=compact" fixedFrame="YES">
                                                         <rect key="frame" x="8" y="0.0" width="75" height="75"/>
                                                     </variation>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IsVerified?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LcY-od-pZz">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROh-qp-O6n">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="154" y="37" width="198" height="21"/>
+                                                        <rect key="frame" x="91" y="37" width="193" height="21"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
                                             <variation key="default">
                                                 <mask key="subviews">
                                                     <exclude reference="SoK-u5-da6"/>
-                                                    <exclude reference="7Ws-nR-OaD"/>
                                                     <exclude reference="7vi-Qz-nwA"/>
-                                                    <exclude reference="LcY-od-pZz"/>
+                                                    <exclude reference="ROh-qp-O6n"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
                                                 <mask key="subviews">
                                                     <include reference="SoK-u5-da6"/>
-                                                    <include reference="7Ws-nR-OaD"/>
                                                     <include reference="7vi-Qz-nwA"/>
-                                                    <include reference="LcY-od-pZz"/>
+                                                    <include reference="ROh-qp-O6n"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="isVerifiedLabel" destination="LcY-od-pZz" id="kFd-0U-Lke"/>
-                                            <outlet property="orderPicture" destination="7vi-Qz-nwA" id="Q3s-Ev-2LC"/>
-                                            <outlet property="orderTitleLabel" destination="SoK-u5-da6" id="M6G-iB-g24"/>
+                                            <outlet property="dateLabel" destination="ROh-qp-O6n" id="Pkd-pp-bzZ"/>
+                                            <outlet property="orderPic" destination="7vi-Qz-nwA" id="NjW-gZ-7ad"/>
+                                            <outlet property="usernameLabel" destination="SoK-u5-da6" id="TmA-gI-5db"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -419,11 +408,170 @@
                     <navigationItem key="navigationItem" id="Zei-yY-G9Z"/>
                     <connections>
                         <outlet property="ordersTable" destination="y8a-QZ-1zx" id="Ek4-SD-y8S"/>
+                        <segue destination="NbR-B2-dEE" kind="push" identifier="cellSegue" id="yLK-Qr-tVh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yE1-1z-gAZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="942" y="2120"/>
+        </scene>
+        <!--Admin Order View Controller-->
+        <scene sceneID="Vf9-Mh-5s1">
+            <objects>
+                <viewController id="NbR-B2-dEE" customClass="AdminOrderViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WJg-2U-J9v"/>
+                        <viewControllerLayoutGuide type="bottom" id="lxh-rQ-kg1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="A9k-ep-0vR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RxW-v4-Q7G">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="32" y="72" width="100" height="100"/>
+                                </variation>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q9L-gs-EfW">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="180" width="240" height="128"/>
+                                </variation>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSa-F8-KsM">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Delete Order">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="149" y="101" width="87" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="deleteOrderButton:" destination="NbR-B2-dEE" eventType="touchUpInside" id="a18-hr-oKK"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ouD-AN-IiB">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="316" width="97" height="30"/>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBE-4N-ENV">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Set Price">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="153" y="315" width="63" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="setPriceButton:" destination="NbR-B2-dEE" eventType="touchUpInside" id="k7l-G7-6MU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORn-fc-7Yn">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Verify Order">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="153" y="132" width="81" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="verifyOrderButton:" destination="NbR-B2-dEE" eventType="touchUpInside" id="NiU-Bh-tCh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ky-U0-yye">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Email">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="157" y="72" width="38" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="emailButton:" destination="NbR-B2-dEE" eventType="touchUpInside" id="vmN-Pg-Ook"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVz-v9-TF7">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="240" y="76" width="105" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0R-pd-naJ">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="248" y="136" width="57" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cuT-fD-qFX">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="248" y="98" width="34" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="saveButton:" destination="NbR-B2-dEE" eventType="touchUpInside" id="3nQ-s6-CXg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="RxW-v4-Q7G"/>
+                                <exclude reference="q9L-gs-EfW"/>
+                                <exclude reference="CSa-F8-KsM"/>
+                                <exclude reference="ouD-AN-IiB"/>
+                                <exclude reference="zBE-4N-ENV"/>
+                                <exclude reference="ORn-fc-7Yn"/>
+                                <exclude reference="1Ky-U0-yye"/>
+                                <exclude reference="LVz-v9-TF7"/>
+                                <exclude reference="n0R-pd-naJ"/>
+                                <exclude reference="cuT-fD-qFX"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="RxW-v4-Q7G"/>
+                                <include reference="q9L-gs-EfW"/>
+                                <include reference="CSa-F8-KsM"/>
+                                <include reference="ouD-AN-IiB"/>
+                                <include reference="zBE-4N-ENV"/>
+                                <include reference="ORn-fc-7Yn"/>
+                                <include reference="1Ky-U0-yye"/>
+                                <include reference="LVz-v9-TF7"/>
+                                <include reference="n0R-pd-naJ"/>
+                                <include reference="cuT-fD-qFX"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="ba7-TZ-dhv"/>
+                    <connections>
+                        <outlet property="detailsTextView" destination="q9L-gs-EfW" id="9Zn-M5-O73"/>
+                        <outlet property="enterPriceTextField" destination="ouD-AN-IiB" id="PrV-qr-Vlx"/>
+                        <outlet property="orderPicture" destination="RxW-v4-Q7G" id="S2d-TM-NHe"/>
+                        <outlet property="priceLabel" destination="LVz-v9-TF7" id="fc3-R0-aj7"/>
+                        <outlet property="verified" destination="n0R-pd-naJ" id="wTe-iN-W8u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h3J-Ja-Ajm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="942" y="2813"/>
         </scene>
         <!--Contact Us View Controller-->
         <scene sceneID="ONe-wI-LZ2">

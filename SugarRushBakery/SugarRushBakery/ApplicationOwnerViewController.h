@@ -19,6 +19,4 @@
 
 - (IBAction)ordersButton:(id)sender;
 
-- (IBAction)signOut:(id)sender;
-
 @end

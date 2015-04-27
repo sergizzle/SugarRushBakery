@@ -60,6 +60,7 @@
 		7DA8D4011AE22631003D2C91 /* OrderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8D4001AE22631003D2C91 /* OrderManager.m */; };
 		7DA8D4041AE22A14003D2C91 /* OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8D4031AE22A14003D2C91 /* OrderViewController.m */; };
 		7DA8D4071AE22AE4003D2C91 /* CustomOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8D4061AE22AE4003D2C91 /* CustomOrderViewController.m */; };
+		7DE9C7921AEDBB6D009470DF /* AdminOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE9C7911AEDBB6D009470DF /* AdminOrderViewController.m */; };
 		7DF3EA201AE8ABB60065B513 /* AllOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF3EA1F1AE8ABB60065B513 /* AllOrdersViewController.m */; };
 		7DF3EA231AE8B02D0065B513 /* AllOrdersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF3EA221AE8B02D0065B513 /* AllOrdersTableViewCell.m */; };
 /* End PBXBuildFile section */
@@ -148,6 +149,8 @@
 		7DA8D4031AE22A14003D2C91 /* OrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderViewController.m; sourceTree = "<group>"; };
 		7DA8D4051AE22AE4003D2C91 /* CustomOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomOrderViewController.h; sourceTree = "<group>"; };
 		7DA8D4061AE22AE4003D2C91 /* CustomOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomOrderViewController.m; sourceTree = "<group>"; };
+		7DE9C7901AEDBB6D009470DF /* AdminOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminOrderViewController.h; sourceTree = "<group>"; };
+		7DE9C7911AEDBB6D009470DF /* AdminOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminOrderViewController.m; sourceTree = "<group>"; };
 		7DF3EA1E1AE8ABB60065B513 /* AllOrdersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllOrdersViewController.h; sourceTree = "<group>"; };
 		7DF3EA1F1AE8ABB60065B513 /* AllOrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllOrdersViewController.m; sourceTree = "<group>"; };
 		7DF3EA211AE8B02D0065B513 /* AllOrdersTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllOrdersTableViewCell.h; sourceTree = "<group>"; };
@@ -246,6 +249,8 @@
 			isa = PBXGroup;
 			children = (
 				7D9227661AE3495A00A1FE97 /* Main.storyboard */,
+				7DE9C7901AEDBB6D009470DF /* AdminOrderViewController.h */,
+				7DE9C7911AEDBB6D009470DF /* AdminOrderViewController.m */,
 				7DF3EA211AE8B02D0065B513 /* AllOrdersTableViewCell.h */,
 				7DF3EA221AE8B02D0065B513 /* AllOrdersTableViewCell.m */,
 				7DF3EA1E1AE8ABB60065B513 /* AllOrdersViewController.h */,
@@ -444,6 +449,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DA8D3FE1AE22434003D2C91 /* Order.m in Sources */,
+				7DE9C7921AEDBB6D009470DF /* AdminOrderViewController.m in Sources */,
 				7DA8D3ED1AE1F6E7003D2C91 /* SignInViewController.m in Sources */,
 				7D9227621AE32FA400A1FE97 /* MyOrdersViewController.m in Sources */,
 				7DA8D3F01AE1FAA0003D2C91 /* SignUpViewController.m in Sources */,

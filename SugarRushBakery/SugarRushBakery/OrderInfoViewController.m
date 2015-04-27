@@ -83,9 +83,19 @@
                     {
                         [order deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                             if (succeeded){
-                                NSLog(@"BOOOOOM"); 
+                                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success"
+                                                                                message:@"Order has been cancelled."
+                                                                               delegate:self
+                                                                      cancelButtonTitle:@"Ok"
+                                                                      otherButtonTitles:nil];
+                                [alert show];
                             } else {
-                                NSLog(@"DELETE ERRIR");
+                                UIAlertView *wrong = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                                message:@"Order was not cancelled correctly."
+                                                                               delegate:self
+                                                                      cancelButtonTitle:@"Ok"
+                                                                      otherButtonTitles:nil];
+                                [wrong show];
                             }
                         }];
                     }

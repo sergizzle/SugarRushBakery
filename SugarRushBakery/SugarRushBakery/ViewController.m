@@ -101,6 +101,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+
     self.admin.hidden = YES;
     self.currentUserLabel.text = @"";
     self.signOutOutlet.hidden = YES;

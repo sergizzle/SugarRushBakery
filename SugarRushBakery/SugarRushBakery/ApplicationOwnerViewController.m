@@ -20,22 +20,14 @@
     if(!self.ordersArray) self.ordersArray = [[NSMutableArray alloc]init];
     
     
-  
-        [self.manager loadOrdersWithCompletionBlock:^(NSArray *objects) {
     
-            self.ordersArray = self.manager.orderList;
-    
-    
-    //        for(id order in self.myOrdersArray)
-    //        {
-    //            if([currentUser.username isEqual:(Order*)order).customer]);
-    //            {
-    //                [self.myOrdersArray addObject:order];
-    //            }
-    //        }
-            
-            
-        }];
+    [self.manager loadOrdersWithCompletionBlock:^(NSArray *objects) {
+        
+        self.ordersArray = self.manager.orderList;
+        
+        
+    }];
+ 
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,11 +54,5 @@
     [self performSegueWithIdentifier:@"ordersSegue" sender:self];
 }
 
-- (IBAction)signOut:(id)sender {
-        User *currentUser = [[User alloc]init];
-        currentUser = [User currentUser];
-        [PFUser logOut];
-    
-          [self.navigationController popToRootViewControllerAnimated:YES];
-}
+
 @end

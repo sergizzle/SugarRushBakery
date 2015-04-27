@@ -10,7 +10,7 @@
 #import "Order.h"
 
 
-@interface OrderManager : NSObject
+@interface OrderManager : NSObject <UIAlertViewDelegate>
 
 @property (nonatomic) NSMutableArray *orderList;
 

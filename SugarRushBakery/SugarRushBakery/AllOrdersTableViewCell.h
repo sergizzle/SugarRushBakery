@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface AllOrdersTableViewCell : UITableViewCell
+@property (strong, nonatomic) IBOutlet UIImageView *orderPic;
+@property (strong, nonatomic) IBOutlet UILabel *usernameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 
 @end

@@ -26,5 +26,6 @@ typedef enum{
 @property NSString *orderTitle;
 @property NSString *userID;
 @property NSString *userName;
+@property NSString *email;
 
 @end

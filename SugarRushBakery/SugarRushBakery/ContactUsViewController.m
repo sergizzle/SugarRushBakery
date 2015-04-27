@@ -39,9 +39,9 @@
 - (IBAction)email:(id)sender {
     
     // Email Subject
-    NSString *emailTitle = @"Test Email";
+    NSString *emailTitle = @"";
     // Email Content
-    NSString *messageBody = @"iOS programming is so fun!";
+    NSString *messageBody = @"";
     // To address
     NSArray *toRecipents = [NSArray arrayWithObject:@"sgfelix11@hotmail.com"];
     
