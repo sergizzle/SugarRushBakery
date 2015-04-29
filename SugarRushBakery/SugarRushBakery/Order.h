@@ -7,7 +7,7 @@
 //
 
 #import <Parse/Parse.h>
-#import "User.h"
+
 
 typedef enum{
     custom,

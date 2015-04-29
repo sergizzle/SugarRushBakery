@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7D5525D11AE8869A007030A5 /* OrderInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5525D01AE8869A007030A5 /* OrderInfoViewController.m */; };
+		7D55971B1AEE438B00624505 /* PremadeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D55971A1AEE438B00624505 /* PremadeViewController.m */; };
 		7D919CEF1AEC59D60067E9CE /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D919CEE1AEC59D60067E9CE /* GalleryViewController.m */; };
 		7D919CF11AEC5F170067E9CE /* Biscuits in Resources */ = {isa = PBXBuildFile; fileRef = 7D919CF01AEC5F170067E9CE /* Biscuits */; };
 		7D919CF31AEC5F260067E9CE /* Cakepops in Resources */ = {isa = PBXBuildFile; fileRef = 7D919CF21AEC5F260067E9CE /* Cakepops */; };
@@ -52,7 +53,6 @@
 		7DA8D3EA1AE1EF22003D2C91 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA8D3E41AE1EF22003D2C91 /* ParseUI.framework */; };
 		7DA8D3ED1AE1F6E7003D2C91 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8D3EC1AE1F6E7003D2C91 /* SignInViewController.m */; };
 		7DA8D3F01AE1FAA0003D2C91 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8D3EF1AE1FAA0003D2C91 /* SignUpViewController.m */; };
-		7DA8D3F31AE1FE9C003D2C91 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8D3F21AE1FE9C003D2C91 /* User.m */; };
 		7DA8D3F61AE2167C003D2C91 /* ApplicationOwnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8D3F51AE2167C003D2C91 /* ApplicationOwnerViewController.m */; };
 		7DA8D3F91AE21C73003D2C91 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8D3F81AE21C73003D2C91 /* ContactUsViewController.m */; };
 		7DA8D3FB1AE21DE8003D2C91 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA8D3FA1AE21DE8003D2C91 /* MessageUI.framework */; };
@@ -78,6 +78,8 @@
 /* Begin PBXFileReference section */
 		7D5525CF1AE8869A007030A5 /* OrderInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderInfoViewController.h; sourceTree = "<group>"; };
 		7D5525D01AE8869A007030A5 /* OrderInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderInfoViewController.m; sourceTree = "<group>"; };
+		7D5597191AEE438B00624505 /* PremadeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PremadeViewController.h; sourceTree = "<group>"; };
+		7D55971A1AEE438B00624505 /* PremadeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PremadeViewController.m; sourceTree = "<group>"; };
 		7D919CED1AEC59D60067E9CE /* GalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryViewController.h; sourceTree = "<group>"; };
 		7D919CEE1AEC59D60067E9CE /* GalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryViewController.m; sourceTree = "<group>"; };
 		7D919CF01AEC5F170067E9CE /* Biscuits */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Biscuits; sourceTree = "<group>"; };
@@ -134,8 +136,6 @@
 		7DA8D3EC1AE1F6E7003D2C91 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		7DA8D3EE1AE1FAA0003D2C91 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		7DA8D3EF1AE1FAA0003D2C91 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
-		7DA8D3F11AE1FE9C003D2C91 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		7DA8D3F21AE1FE9C003D2C91 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		7DA8D3F41AE2167C003D2C91 /* ApplicationOwnerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationOwnerViewController.h; sourceTree = "<group>"; };
 		7DA8D3F51AE2167C003D2C91 /* ApplicationOwnerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationOwnerViewController.m; sourceTree = "<group>"; };
 		7DA8D3F71AE21C73003D2C91 /* ContactUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactUsViewController.h; sourceTree = "<group>"; };
@@ -279,14 +279,14 @@
 				7DA8D4001AE22631003D2C91 /* OrderManager.m */,
 				7DA8D4021AE22A14003D2C91 /* OrderViewController.h */,
 				7DA8D4031AE22A14003D2C91 /* OrderViewController.m */,
+				7D5597191AEE438B00624505 /* PremadeViewController.h */,
+				7D55971A1AEE438B00624505 /* PremadeViewController.m */,
 				7DA8D3EB1AE1F6E7003D2C91 /* SignInViewController.h */,
 				7DA8D3EC1AE1F6E7003D2C91 /* SignInViewController.m */,
 				7DA8D3EE1AE1FAA0003D2C91 /* SignUpViewController.h */,
 				7DA8D3EF1AE1FAA0003D2C91 /* SignUpViewController.m */,
 				7DA8D3A91AE1E793003D2C91 /* ViewController.h */,
 				7DA8D3AA1AE1E793003D2C91 /* ViewController.m */,
-				7DA8D3F11AE1FE9C003D2C91 /* User.h */,
-				7DA8D3F21AE1FE9C003D2C91 /* User.m */,
 				7DA8D3AF1AE1E793003D2C91 /* Images.xcassets */,
 				7DA8D3B11AE1E793003D2C91 /* LaunchScreen.xib */,
 				7D982F081AE9A59A0073479F /* App Icons */,
@@ -454,9 +454,9 @@
 				7D9227621AE32FA400A1FE97 /* MyOrdersViewController.m in Sources */,
 				7DA8D3F01AE1FAA0003D2C91 /* SignUpViewController.m in Sources */,
 				7DA8D4041AE22A14003D2C91 /* OrderViewController.m in Sources */,
-				7DA8D3F31AE1FE9C003D2C91 /* User.m in Sources */,
 				7DA8D4011AE22631003D2C91 /* OrderManager.m in Sources */,
 				7DA8D3AB1AE1E793003D2C91 /* ViewController.m in Sources */,
+				7D55971B1AEE438B00624505 /* PremadeViewController.m in Sources */,
 				7DA8D3F61AE2167C003D2C91 /* ApplicationOwnerViewController.m in Sources */,
 				7DA8D4071AE22AE4003D2C91 /* CustomOrderViewController.m in Sources */,
 				7DA8D3A81AE1E793003D2C91 /* AppDelegate.m in Sources */,

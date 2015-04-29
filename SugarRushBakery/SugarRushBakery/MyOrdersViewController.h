@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "User.h"
+#import <Parse/Parse.h>
 #import "MyOrdersTableViewCell.h"
 #import "Order.h"
 #import "OrderManager.h"

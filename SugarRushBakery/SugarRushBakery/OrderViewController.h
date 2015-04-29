@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "User.h"
+#import <Parse/Parse.h>
 #import "MyOrdersTableViewCell.h"
 #import "Order.h"
 #import "OrderManager.h"
@@ -17,6 +17,8 @@
 @interface OrderViewController : UIViewController
 
 @property NSMutableArray *myOrdersArray;
+@property OrderManager *manager;
+
 
 - (IBAction)premadeButton:(id)sender;
 - (IBAction)customButton:(id)sender;

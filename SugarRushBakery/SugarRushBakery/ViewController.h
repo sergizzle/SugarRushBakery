@@ -8,7 +8,6 @@
 
 #import <Parse/Parse.h>
 #import <UIKit/UIKit.h>
-#import "User.h"
 #import "GalleryViewController.h"
 
 @interface ViewController : UIViewController

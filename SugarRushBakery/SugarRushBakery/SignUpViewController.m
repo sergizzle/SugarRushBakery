@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Super Nova. All rights reserved.
 //
 
-#import "User.h"
+
 #import "SignUpViewController.h"
 
 @interface SignUpViewController ()
@@ -17,12 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.firstNameField.delegate = self;
-    self.lastNameField.delegate = self;
+   
     self.usernameField.delegate = self;
     self.emailAddressField.delegate = self;
     self.passwordField.delegate = self;
     self.confirmPasswordField.delegate = self;
+    //self.confirmPasswordField.tag =1;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,6 +43,7 @@
 //Declare a delegate, assign your textField to the delegate and then include these methods
 
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+   // if(textField.tag =1)
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
     return YES;
 }
@@ -81,10 +82,6 @@
 #pragma mark - sign in stuff
 
 - (IBAction)signUp:(id)sender {
-    NSString *firstName = [self.firstNameField.text stringByTrimmingCharactersInSet:
-                           [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    NSString *lastName = [self.lastNameField.text stringByTrimmingCharactersInSet:
-                          [NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSString *username = [self.usernameField.text stringByTrimmingCharactersInSet:
                           [NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSString *email = [self.emailAddressField.text stringByTrimmingCharactersInSet:
@@ -105,9 +102,7 @@
                                                            delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alertView show];
     } else {
-        User *newUser = [User user];
-        newUser.firstName = firstName;
-        newUser.lastName = lastName;
+        PFUser *newUser = [PFUser user];
         newUser.username = username;
         newUser.email = email;
         newUser.password = password;

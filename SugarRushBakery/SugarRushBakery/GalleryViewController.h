@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "GalleryTableViewCell.h"
+#import "PremadeViewController.h"
 
 @interface GalleryViewController : UIViewController <UITextViewDelegate, UITableViewDataSource>
 
@@ -37,4 +38,5 @@
 @property NSMutableArray *cupcakeImagePaths;
 @property NSMutableArray *flowerImagePaths;
 
+@property(nonatomic,retain)UIImage *picture;
 @end

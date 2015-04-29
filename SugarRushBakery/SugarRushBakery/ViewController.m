@@ -108,16 +108,16 @@
     self.signinOutlet.hidden = NO;
     
     //Make sign in dissapear when a user is signed in
-    if([User currentUser] !=NULL)
+    if([PFUser currentUser] !=NULL)
     {
         self.signOutOutlet.hidden = NO;
         self.signinOutlet.hidden = YES;
-        NSString *name = [[User currentUser] username];
+        NSString *name = [[PFUser currentUser] username];
 
         self.currentUserLabel.text = [NSString stringWithFormat:@"Welcome %@", name];
         
         //Admin button shows
-        if([[[User currentUser]username] isEqual:@"Sergizzle"])
+        if([[[PFUser currentUser]username] isEqual:@"Sergizzle"])
         {
             self.admin.hidden = NO;
         }
@@ -134,8 +134,8 @@
 
 - (IBAction)signOutButton:(id)sender {
     
-    User *currentUser = [[User alloc]init];
-    currentUser = [User currentUser];
+
+   // PFUser *currentUser = [PFUser currentUser];
     [PFUser logOut];
 
     self.signinOutlet.hidden = NO;
@@ -168,7 +168,7 @@
 }
 
 - (IBAction)OrdersButton:(id)sender {
-    if(![User currentUser])
+    if(![PFUser currentUser])
     {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
                                                         message:@"You must first sign in."

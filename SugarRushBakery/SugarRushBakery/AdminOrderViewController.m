@@ -168,37 +168,40 @@
     //Delete from segue array
     [self.editedOrder removeObjectAtIndex:_number1];
     
-    //Get the user with the order
-    PFQuery *query1 = [User query];
-    [query1 whereKey:@"username" equalTo:self.finalOrder.userName];
-    NSArray *user = [query1 findObjects];
-    User *thisUser = [user objectAtIndex:0];
 
-
-    //XCODE, WHY DO I NEED TO DO THIS? Works with temparray
-    NSArray *tempArray = [thisUser.ordersArray copy];
-     int count = 0;
+#pragma mark- used this to delete users order array
     
-    for(Order *object in tempArray)
-    {
-       
-        if(self.finalOrder.objectId == object.objectId)
-        {
-            [thisUser.ordersArray removeObjectAtIndex:count];
-        }
-        count++;
-    }
     
-
-    [thisUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (!error) {
-            [[NSNotificationCenter defaultCenter]
-             postNotificationName:@"ParseSaveComplete"
-             object:self];
-        } else {
-            
-        }
-    }];
+//    PFQuery *query1 = [User query];
+//    [query1 whereKey:@"username" equalTo:self.finalOrder.userName];
+//    NSArray *user = [query1 findObjects];
+//    User *thisUser = [user objectAtIndex:0];
+//
+//
+//    //XCODE, WHY DO I NEED TO DO THIS? Works with temparray
+//    NSArray *tempArray = [thisUser.ordersArray copy];
+//     int count = 0;
+//    
+//    for(Order *object in tempArray)
+//    {
+//       
+//        if(self.finalOrder.objectId == object.objectId)
+//        {
+//            [thisUser.ordersArray removeObjectAtIndex:count];
+//        }
+//        count++;
+//    }
+//    
+//
+//    [thisUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//        if (!error) {
+//            [[NSNotificationCenter defaultCenter]
+//             postNotificationName:@"ParseSaveComplete"
+//             object:self];
+//        } else {
+//            
+//        }
+//    }];
     
     
 

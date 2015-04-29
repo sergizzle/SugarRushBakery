@@ -57,20 +57,23 @@
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     // the user clicked OK
     if (buttonIndex == 1) {
-        User *thisUser = [User currentUser];
-        [thisUser.ordersArray removeObjectAtIndex:_number1];
         
         
-        //Delete order from user order array
-        [thisUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            if (!error) {
-                [[NSNotificationCenter defaultCenter]
-                 postNotificationName:@"ParseSaveComplete"
-                 object:self];
-            } else {
-                
-            }
-        }];
+#pragma mark- used this for deleting users order array
+//        User *thisUser = [User currentUser];
+//        [thisUser.ordersArray removeObjectAtIndex:_number1];
+//        
+//        
+//        //Delete order from user order array
+//        [thisUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//            if (!error) {
+//                [[NSNotificationCenter defaultCenter]
+//                 postNotificationName:@"ParseSaveComplete"
+//                 object:self];
+//            } else {
+//                
+//            }
+//        }];
         
         //Delete the object from Order Class
         PFQuery *query = [PFQuery queryWithClassName:@"Order"];
@@ -81,6 +84,7 @@
                 {
                     if ([order.objectId isEqual:self.finalOrder.objectId])
                     {
+
                         [order deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                             if (succeeded){
                                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success"
@@ -88,7 +92,12 @@
                                                                                delegate:self
                                                                       cancelButtonTitle:@"Ok"
                                                                       otherButtonTitles:nil];
+                                
                                 [alert show];
+                                
+                                //delete from local array
+                                [self.finalOrderArray removeObjectAtIndex:self.number1];
+                                [[self navigationController] popViewControllerAnimated:YES];
                             } else {
                                 UIAlertView *wrong = [[UIAlertView alloc] initWithTitle:@"Error"
                                                                                 message:@"Order was not cancelled correctly."
@@ -96,6 +105,7 @@
                                                                       cancelButtonTitle:@"Ok"
                                                                       otherButtonTitles:nil];
                                 [wrong show];
+                                [[self navigationController] popViewControllerAnimated:YES]; 
                             }
                         }];
                     }
@@ -109,7 +119,7 @@
         }];
         
         
-            [[self navigationController] popViewControllerAnimated:YES]; 
+        
         
     }
     
@@ -119,13 +129,5 @@
 }
 
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+
 @end

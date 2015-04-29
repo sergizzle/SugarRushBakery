@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 #import "OrderManager.h"
-#import "User.h"
+
 
 
 
@@ -26,5 +26,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *orderTitle;
 
 @property (strong, nonatomic) IBOutlet UIDatePicker *dueDate;
+
+@property (strong, nonatomic) UIImage *image;
 
 @end

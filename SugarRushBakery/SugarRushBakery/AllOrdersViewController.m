@@ -51,8 +51,8 @@
     
     Order *order = [self.thisOrderArray objectAtIndex:indexPath.row];
     
-    
-    [order fetchIfNeeded];
+    //For some reason, needed this before
+   // [order fetchIfNeeded];
     PFFile *file = order.orderImage;
     
 

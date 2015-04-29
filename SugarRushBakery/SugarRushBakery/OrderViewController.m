@@ -10,8 +10,7 @@
 
 @interface OrderViewController ()
 
-@property OrderManager *manager;
-
+@property NSMutableArray *tempArray;
 
 @end
 
@@ -19,16 +18,33 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-
     
+    self.manager = [[OrderManager alloc]init];
+    if(!self.myOrdersArray) self.myOrdersArray = [[NSMutableArray alloc]init];
+    
+    //Load the orders that belong to the current user
+    PFUser *thisUser = [PFUser currentUser];
+    PFQuery *query1 = [Order query];
+     [query1 whereKey:@"userName" equalTo:thisUser.username];
+    
+    [query1 findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+                if (!error) {
+                    
+                    for (PFObject *object in objects) {
+                        [self.myOrdersArray addObject:object];
+                    }
+
+                    
+                } else {
+                    // Log details of the failure
+                    NSLog(@"Error: %@ %@", error, [error userInfo]);
+                }
+            }];    
 }
 
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    User *currentUser = [User currentUser];
-    self.myOrdersArray = currentUser.ordersArray;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,12 +57,12 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    //Link the object from 1st to 2nd controller
-//    if ([[segue identifier] isEqualToString:@"myOrder"])
-//    {
-//        MyOrdersViewController *dest = [segue destinationViewController];
-//        dest.thisOrderArray = self.myOrdersArray;
-//    }
+   // Link the object from 1st to 2nd controller
+    if ([[segue identifier] isEqualToString:@"myOrder"])
+    {
+        MyOrdersViewController *dest = [segue destinationViewController];
+        dest.thisOrderArray = self.myOrdersArray;
+    }
 }
 
 

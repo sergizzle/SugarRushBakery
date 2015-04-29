@@ -27,9 +27,6 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     self.automaticallyAdjustsScrollViewInsets = NO;
-
-    User *currentUser = [User currentUser];
-    self.thisOrderArray = currentUser.ordersArray;
     [self.myOrdersTableView reloadData];
     
 }
@@ -39,15 +36,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -69,32 +57,36 @@
   
     Order *order = [self.thisOrderArray objectAtIndex:indexPath.row];
    
-    
-    [order fetchIfNeeded];
-    
-    
-    PFFile *file = order.orderImage;
-   
-   
-    
-    [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-        if(!error) {
-            UIImage *image = [UIImage imageWithData:data];
-            cell.orderPicture.image = image;
+   // dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        //[order fetchIfNeeded];
+        
+        
+        PFFile *file = order.orderImage;
+        
+        
+        
+        [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            if(!error) {
+                UIImage *image = [UIImage imageWithData:data];
+                cell.orderPicture.image = image;
+            }
+        }];
+        
+        
+        cell.orderTitleLabel.text = order.orderTitle;
+        
+        if(!order.verified)
+        {
+            cell.isVerifiedLabel.text = @"In Process";
         }
-    }];
- 
+        else
+        {
+            cell.isVerifiedLabel.text = @"Processed";
+        }
+        
+        [cell setNeedsDisplay];
+ //   });
     
-    cell.orderTitleLabel.text = order.orderTitle;
-    
-    if(!order.verified)
-    {
-        cell.isVerifiedLabel.text = @"In Process";
-    }
-    else
-    {
-        cell.isVerifiedLabel.text = @"Processed";
-    }
 
     
     return cell;
@@ -119,6 +111,7 @@
         
         OrderInfoViewController *dest = [segue destinationViewController];
         dest.finalOrder = self.myOrder;
+        dest.finalOrderArray = self.thisOrderArray;
         dest.number1 = self.number;
      
     }

@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Super Nova. All rights reserved.
 //
 
-#import "User.h"
+#import <Parse/Parse.h>
 #import <UIKit/UIKit.h>
 #import "OrderManager.h"
 #import "AllOrdersViewController.h"

@@ -101,20 +101,6 @@
     [self.view setFrame:CGRectMake(0,0,320,460)];
 }
 
-//-(void)Orderplaced
-//{
-//    UIAlertView *confirmed = [[UIAlertView alloc] initWithTitle:@"Congratulations"
-//                                                        message:@"Your order has been placed."
-//                                                       delegate:self
-//                                              cancelButtonTitle:@"Ok"
-//                                              otherButtonTitles:nil];
-//    confirmed.tag = 1;
-//    
-//    
-//    [confirmed show];
-//    
-//    
-//}
 
 - (IBAction)selectImage:(id)sender {
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum]) {
@@ -179,27 +165,19 @@
 }
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    
     // the user clicked OK
     if (buttonIndex == 1) {
         
-        
-        
         NSString *tempString = self.descriptionField.text;
         NSString *ordertitle = self.orderTitle.text;
-        
-        
         NSDate *pickerDate = self.dueDate.date;
-        
         NSData *imageData = UIImagePNGRepresentation(self.imageView.image);
         PFFile *orderImage =[PFFile fileWithName:@"OrderImage" data:imageData];
         
         
-        
-        
-        
         [self.manager addOrderswithDate:pickerDate andDescription:tempString andVerified:NO andPrice:0 andImage:orderImage andOrderType:0 andOrderTitle:ordertitle];
   
-        //[self Orderplaced];
          [self.navigationController popToRootViewControllerAnimated:YES];
 
     }

@@ -13,6 +13,7 @@
 
 @property Order *finalOrder;
 @property NSInteger number1;
+@property NSMutableArray *finalOrderArray;
 
 
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;

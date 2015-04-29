@@ -53,44 +53,11 @@
     toAdd.OrderType = orderType;
     toAdd.orderTitle = orderTitle;
 
-    User *currentUser = [[User alloc] init];
-    currentUser = [User currentUser];
+    PFUser *currentUser = [PFUser currentUser];
     toAdd.userID = currentUser.objectId;
     toAdd.userName = currentUser.username;
     toAdd.email = currentUser.email;
-    
 
-    
-    if(!currentUser.ordersArray)
-    {
-        currentUser.ordersArray = [[NSMutableArray alloc]init];
-    }
-    
-    [currentUser.ordersArray addObject:toAdd];
-    
-    [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (!error) {
-            [[NSNotificationCenter defaultCenter]
-             postNotificationName:@"ParseSaveComplete"
-             object:self];
-            
-            UIAlertView *confirmed = [[UIAlertView alloc] initWithTitle:@"Congratulations"
-                                                                message:@"Your order has been placed."
-                                                               delegate:self
-                                                      cancelButtonTitle:@"Ok"
-                                                      otherButtonTitles:nil];
-            confirmed.tag =1;
-            [confirmed show];
-            
-        } else {
-            UIAlertView *wrong = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                                message:@"Order was not placed correctly."
-                                                               delegate:self
-                                                      cancelButtonTitle:@"Ok"
-                                                      otherButtonTitles:nil];
-            [wrong show];
-        }
-    }];
     
     //save the object to Parse
     [toAdd saveInBackground];
@@ -98,6 +65,13 @@
     
     //add it to the local list
     [self.orderList addObject:toAdd];
+    
+    UIAlertView *confirmed = [[UIAlertView alloc] initWithTitle:@"Congratulations"
+                                                        message:@"Your order has been placed."
+                                                       delegate:self
+                                              cancelButtonTitle:@"Ok"
+                                              otherButtonTitles:nil];
+    [confirmed show];
 }
 
 

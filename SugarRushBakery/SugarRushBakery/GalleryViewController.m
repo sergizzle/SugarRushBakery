@@ -15,7 +15,7 @@
 @end
 
 @implementation GalleryViewController
-
+@synthesize picture;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -123,25 +123,70 @@
     return cell;
 }
 
-//#pragma mark segue stuff
-//
-//
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    self.myOrder = [self.thisOrderArray objectAtIndex:indexPath.row];
-//    //self.picture = cell.orderPicture.image;
-//    [self performSegueWithIdentifier:@"cellSegue" sender:self];
-//}
-//
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//
-//    if ([[segue identifier] isEqualToString:@"cellSegue"]) {
-//
-//        OrderInfoViewController *dest = [segue destinationViewController];
+#pragma mark segue stuff
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //self.myOrder = [self.thisOrderArray objectAtIndex:indexPath.row];
+    // 0 = biscuit
+    // 1 = cakepop
+    // 2 = cake
+    // 3 = chocolate
+    // 4 = cookie
+    // 5 = cupcake
+    // 6 = flower
+    
+//    if(indexPath.section == 0) {
+//        self.picture = self.biscuitImages[indexPath.row];
+//    } else if(indexPath.section == 1) {
+//        self.picture = self.cakepopImages[indexPath.row] ;
+//    } else if(indexPath.section == 2) {
+//        self.picture = self.cakeImages[indexPath.row];
+//    } else if(indexPath.section == 3) {
+//         self.picture = self.chocolateImages[indexPath.row];
+//    } else if(indexPath.section == 4) {
+//         self.picture = self.cookieImages[indexPath.row];
+//    } else if(indexPath.section == 5) {
+//         self.picture = self.cupcakeImages[indexPath.row];
+//    } else if(indexPath.section == 6) {
+//        self.picture = self.flowerImages[indexPath.row];
+//    }
+    UITableViewCell *cell;
+    if(indexPath.section == 0) {
+        cell = [tableView cellForRowAtIndexPath:indexPath];
+    } else if(indexPath.section == 1) {
+        cell = [tableView cellForRowAtIndexPath:indexPath];
+    } else if(indexPath.section == 2) {
+        cell = [tableView cellForRowAtIndexPath:indexPath];
+    } else if(indexPath.section == 3) {
+        cell = [tableView cellForRowAtIndexPath:indexPath];
+    } else if(indexPath.section == 4) {
+        cell = [tableView cellForRowAtIndexPath:indexPath];
+    } else if(indexPath.section == 5) {
+        cell = [tableView cellForRowAtIndexPath:indexPath];
+    } else if(indexPath.section == 6) {
+        cell = [tableView cellForRowAtIndexPath:indexPath];
+    }
+    
+    
+   
+    [self performSegueWithIdentifier:@"premadeSegue" sender:cell.imageView.image];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+
+    if ([[segue identifier] isEqualToString:@"premadeSegue"]) {
+        UIImage *selectedImage = (UIImage*)sender;
+        
+        PremadeViewController *dest = [segue destinationViewController];
 //        dest.finalOrder = self.myOrder;
 //        dest.picture1 = self.picture;
-//
-//    }
-//}
+        
+
+        dest.image = selectedImage;
+
+    }
+}
 
 @end
