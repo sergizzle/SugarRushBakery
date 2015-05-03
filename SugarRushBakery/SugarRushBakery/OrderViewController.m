@@ -62,11 +62,21 @@
     {
         MyOrdersViewController *dest = [segue destinationViewController];
         dest.thisOrderArray = self.myOrdersArray;
+    } else if ([[segue identifier] isEqualToString:@"orderToGallery"]) {
+        GalleryViewController *dest = [segue destinationViewController];
+        dest.biscuitImages = self.biscuitImages;
+        dest.cakeImages = self.cakeImages;
+        dest.cakepopImages = self.cakepopImages;
+        dest.chocolateImages = self.chocolateImages;
+        dest.cookieImages = self.cookieImages;
+        dest.cupcakeImages = self.cupcakeImages;
+        dest.flowerImages = self.flowerImages;
     }
 }
 
 
 - (IBAction)premadeButton:(id)sender {
+    [self performSegueWithIdentifier:@"orderToGallery" sender:self];
 }
 
 - (IBAction)customButton:(id)sender {
@@ -76,4 +86,5 @@
 - (IBAction)MyOrdersButton:(id)sender {
     [self performSegueWithIdentifier:@"myOrder" sender:self];
 }
+
 @end

@@ -206,7 +206,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    if ([[segue identifier] isEqualToString:@"gallerySegue"]) {
+    if ([[segue identifier] isEqualToString:@"gallerySegue"] || [[segue identifier] isEqualToString:@"order"]) {
         
         GalleryViewController *dest = [segue destinationViewController];
         dest.biscuitImages = self.biscuitImages;

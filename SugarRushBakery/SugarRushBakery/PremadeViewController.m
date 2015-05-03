@@ -18,8 +18,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.imageView setImage: self.image];
+    if(self.image) {
+        [self.imageView setImage: self.image];
+    }
     //[self.imageView reloadInputViews];
+    
+    //_imageView = [[UIImageView alloc]initWithImage:image];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,9 +43,17 @@
 
 
 - (IBAction)orderButton:(id)sender {
-    self.imageView.image = self.image;
+    [self performSegueWithIdentifier:@"premadeToCustom" sender:self];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([[segue identifier] isEqualToString:@"premadeToCustom"]) {
+        CustomOrderViewController *dest = [segue destinationViewController];
+        
+        dest.image = self.image;
+    }
+}
 
 /*
  #pragma mark - Navigation

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XWH-65-CzQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XWH-65-CzQ">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -762,6 +762,7 @@
                     <connections>
                         <segue destination="4u5-63-q64" kind="push" identifier="customOrder" id="bM2-or-jyx"/>
                         <segue destination="sTS-Jv-OUD" kind="push" identifier="myOrder" id="15Z-6t-ytw"/>
+                        <segue destination="u2l-7t-npx" kind="push" identifier="orderToGallery" id="4mR-6B-Oti"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="09I-lg-XWl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -815,7 +816,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="GSH-o4-of3"/>
                     <connections>
-                        <outlet property="image" destination="DYs-fr-9Yz" id="Eiu-GX-ZE3"/>
+                        <outlet property="imageView" destination="DYs-fr-9Yz" id="D6M-HJ-tTH"/>
+                        <segue destination="4u5-63-q64" kind="push" identifier="premadeToCustom" id="kwC-i5-dbm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GmM-LH-0Af" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1125,6 +1127,7 @@
                         <outlet property="dueDate" destination="JfY-W3-y7c" id="per-DK-bHh"/>
                         <outlet property="imageView" destination="vWD-6m-obJ" id="zrN-Q8-NYC"/>
                         <outlet property="orderTitle" destination="0QV-zX-Yv8" id="deV-m2-Ff8"/>
+                        <outlet property="selectImage" destination="bwE-7n-iG8" id="kGc-x7-AnS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTf-OX-77r" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1250,5 +1253,9 @@
             <point key="canvasLocation" x="367.5" y="508"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="bM2-or-jyx"/>
+        <segue reference="4mR-6B-Oti"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.35084234976012307" green="0.66639466729349262" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

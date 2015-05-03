@@ -30,13 +30,6 @@
 @property NSMutableArray *cupcakeImages;
 @property NSMutableArray *flowerImages;
 
-@property NSMutableArray *biscuitImagePaths;
-@property NSMutableArray *cakeImagePaths;
-@property NSMutableArray *cakepopImagePaths;
-@property NSMutableArray *chocolateImagePaths;
-@property NSMutableArray *cookieImagePaths;
-@property NSMutableArray *cupcakeImagePaths;
-@property NSMutableArray *flowerImagePaths;
 
 @property(nonatomic,retain)UIImage *picture;
 @end

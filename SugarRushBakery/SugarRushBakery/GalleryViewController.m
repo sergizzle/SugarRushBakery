@@ -70,15 +70,11 @@
         }
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 80;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-
-{
-    
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
         if(section == 0) { // biscuits
             return @"Biscuits";
         } else if(section == 1) { // cakepops
@@ -141,55 +137,30 @@
     // 5 = cupcake
     // 6 = flower
     
-//    if(indexPath.section == 0) {
-//        self.picture = self.biscuitImages[indexPath.row];
-//    } else if(indexPath.section == 1) {
-//        self.picture = self.cakepopImages[indexPath.row] ;
-//    } else if(indexPath.section == 2) {
-//        self.picture = self.cakeImages[indexPath.row];
-//    } else if(indexPath.section == 3) {
-//         self.picture = self.chocolateImages[indexPath.row];
-//    } else if(indexPath.section == 4) {
-//         self.picture = self.cookieImages[indexPath.row];
-//    } else if(indexPath.section == 5) {
-//         self.picture = self.cupcakeImages[indexPath.row];
-//    } else if(indexPath.section == 6) {
-//        self.picture = self.flowerImages[indexPath.row];
-//    }
-    UITableViewCell *cell;
     if(indexPath.section == 0) {
-        cell = [tableView cellForRowAtIndexPath:indexPath];
+        self.picture = self.biscuitImages[indexPath.row];
     } else if(indexPath.section == 1) {
-        cell = [tableView cellForRowAtIndexPath:indexPath];
+        self.picture = self.cakepopImages[indexPath.row] ;
     } else if(indexPath.section == 2) {
-        cell = [tableView cellForRowAtIndexPath:indexPath];
+        self.picture = self.cakeImages[indexPath.row];
     } else if(indexPath.section == 3) {
-        cell = [tableView cellForRowAtIndexPath:indexPath];
+         self.picture = self.chocolateImages[indexPath.row];
     } else if(indexPath.section == 4) {
-        cell = [tableView cellForRowAtIndexPath:indexPath];
+         self.picture = self.cookieImages[indexPath.row];
     } else if(indexPath.section == 5) {
-        cell = [tableView cellForRowAtIndexPath:indexPath];
+         self.picture = self.cupcakeImages[indexPath.row];
     } else if(indexPath.section == 6) {
-        cell = [tableView cellForRowAtIndexPath:indexPath];
+        self.picture = self.flowerImages[indexPath.row];
     }
-    
-    
-   
-    [self performSegueWithIdentifier:@"premadeSegue" sender:cell.imageView.image];
+
+    [self performSegueWithIdentifier:@"premadeSegue" sender:self];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 
     if ([[segue identifier] isEqualToString:@"premadeSegue"]) {
-        UIImage *selectedImage = (UIImage*)sender;
-        
         PremadeViewController *dest = [segue destinationViewController];
-//        dest.finalOrder = self.myOrder;
-//        dest.picture1 = self.picture;
-        
-
-        dest.image = selectedImage;
-
+        dest.image = self.picture;
     }
 }
 
