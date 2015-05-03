@@ -22,13 +22,7 @@
 // 5 = cupcakes
 // 6 = flowers
 
-@property NSMutableArray *biscuitImages;
-@property NSMutableArray *cakeImages;
-@property NSMutableArray *cakepopImages;
-@property NSMutableArray *chocolateImages;
-@property NSMutableArray *cookieImages;
-@property NSMutableArray *cupcakeImages;
-@property NSMutableArray *flowerImages;
+@property NSMutableArray *arrayToDisplay;
 
 
 @property(nonatomic,retain)UIImage *picture;

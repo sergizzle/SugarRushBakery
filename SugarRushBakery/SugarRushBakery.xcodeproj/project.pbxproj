@@ -63,6 +63,7 @@
 		7DE9C7921AEDBB6D009470DF /* AdminOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE9C7911AEDBB6D009470DF /* AdminOrderViewController.m */; };
 		7DF3EA201AE8ABB60065B513 /* AllOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF3EA1F1AE8ABB60065B513 /* AllOrdersViewController.m */; };
 		7DF3EA231AE8B02D0065B513 /* AllOrdersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF3EA221AE8B02D0065B513 /* AllOrdersTableViewCell.m */; };
+		983F384E1AF605D400157FFA /* GallerySelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 983F384D1AF605D400157FFA /* GallerySelectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +156,8 @@
 		7DF3EA1F1AE8ABB60065B513 /* AllOrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllOrdersViewController.m; sourceTree = "<group>"; };
 		7DF3EA211AE8B02D0065B513 /* AllOrdersTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllOrdersTableViewCell.h; sourceTree = "<group>"; };
 		7DF3EA221AE8B02D0065B513 /* AllOrdersTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllOrdersTableViewCell.m; sourceTree = "<group>"; };
+		983F384C1AF605D400157FFA /* GallerySelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GallerySelectionViewController.h; sourceTree = "<group>"; };
+		983F384D1AF605D400157FFA /* GallerySelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GallerySelectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +266,8 @@
 				7DA8D3F81AE21C73003D2C91 /* ContactUsViewController.m */,
 				7DA8D4051AE22AE4003D2C91 /* CustomOrderViewController.h */,
 				7DA8D4061AE22AE4003D2C91 /* CustomOrderViewController.m */,
+				983F384C1AF605D400157FFA /* GallerySelectionViewController.h */,
+				983F384D1AF605D400157FFA /* GallerySelectionViewController.m */,
 				7D919D001AEC6DC00067E9CE /* GalleryTableViewCell.h */,
 				7D919D011AEC6DC00067E9CE /* GalleryTableViewCell.m */,
 				7D919CED1AEC59D60067E9CE /* GalleryViewController.h */,
@@ -454,6 +459,7 @@
 				7D9227621AE32FA400A1FE97 /* MyOrdersViewController.m in Sources */,
 				7DA8D3F01AE1FAA0003D2C91 /* SignUpViewController.m in Sources */,
 				7DA8D4041AE22A14003D2C91 /* OrderViewController.m in Sources */,
+				983F384E1AF605D400157FFA /* GallerySelectionViewController.m in Sources */,
 				7DA8D4011AE22631003D2C91 /* OrderManager.m in Sources */,
 				7DA8D3AB1AE1E793003D2C91 /* ViewController.m in Sources */,
 				7D55971B1AEE438B00624505 /* PremadeViewController.m in Sources */,

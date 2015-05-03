@@ -157,7 +157,7 @@
 }
 
 - (IBAction)GalleryButton:(id)sender {
-    [self   performSegueWithIdentifier:@"gallerySegue" sender:self];
+    [self   performSegueWithIdentifier:@"gallerySelection" sender:self];
 }
 
 - (IBAction)ContactButton:(id)sender {
@@ -196,19 +196,12 @@
     }
 }
 
-//@property NSMutableArray *biscuitImages;
-//@property NSMutableArray *cakeImages;
-//@property NSMutableArray *cakepopImages;
-//@property NSMutableArray *chocolateImages;
-//@property NSMutableArray *cookieImages;
-//@property NSMutableArray *cupcakeImages;
-//@property NSMutableArray *flowerImages;
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    if ([[segue identifier] isEqualToString:@"gallerySegue"] || [[segue identifier] isEqualToString:@"order"]) {
+    if ([[segue identifier] isEqualToString:@"gallerySelection"]) {
         
-        GalleryViewController *dest = [segue destinationViewController];
+        GallerySelectionViewController *dest = [segue destinationViewController];
         dest.biscuitImages = self.biscuitImages;
         dest.cakeImages = self.cakeImages;
         dest.cakepopImages = self.cakepopImages;
@@ -217,6 +210,15 @@
         dest.cupcakeImages = self.cupcakeImages;
         dest.flowerImages = self.flowerImages;
         
+    } else if([[segue identifier] isEqualToString:@"order"]) {
+        OrderViewController *dest = [segue destinationViewController];
+        dest.biscuitImages = self.biscuitImages;
+        dest.cakeImages = self.cakeImages;
+        dest.cakepopImages = self.cakepopImages;
+        dest.chocolateImages = self.chocolateImages;
+        dest.cookieImages = self.cookieImages;
+        dest.cupcakeImages = self.cupcakeImages;
+        dest.flowerImages = self.flowerImages;
     }
 }
 

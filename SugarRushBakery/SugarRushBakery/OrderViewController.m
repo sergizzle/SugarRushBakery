@@ -63,7 +63,7 @@
         MyOrdersViewController *dest = [segue destinationViewController];
         dest.thisOrderArray = self.myOrdersArray;
     } else if ([[segue identifier] isEqualToString:@"orderToGallery"]) {
-        GalleryViewController *dest = [segue destinationViewController];
+        GallerySelectionViewController *dest = [segue destinationViewController];
         dest.biscuitImages = self.biscuitImages;
         dest.cakeImages = self.cakeImages;
         dest.cakepopImages = self.cakepopImages;
