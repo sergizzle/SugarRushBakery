@@ -29,4 +29,5 @@
 
 @property (strong, nonatomic) UIImage *image;
 
+@property (strong, nonatomic) IBOutlet UIButton *selectImage;
 @end

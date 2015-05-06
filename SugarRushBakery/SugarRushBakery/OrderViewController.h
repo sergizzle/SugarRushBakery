@@ -19,6 +19,13 @@
 @property NSMutableArray *myOrdersArray;
 @property OrderManager *manager;
 
+@property NSMutableArray *biscuitImages;
+@property NSMutableArray *cakeImages;
+@property NSMutableArray *cakepopImages;
+@property NSMutableArray *chocolateImages;
+@property NSMutableArray *cookieImages;
+@property NSMutableArray *cupcakeImages;
+@property NSMutableArray *flowerImages;
 
 - (IBAction)premadeButton:(id)sender;
 - (IBAction)customButton:(id)sender;

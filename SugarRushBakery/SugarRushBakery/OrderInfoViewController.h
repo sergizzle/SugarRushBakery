@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "MyOrdersViewController.h"
 
-@interface OrderInfoViewController : ViewController
+@interface OrderInfoViewController : UIViewController
 
 @property Order *finalOrder;
 @property NSInteger number1;

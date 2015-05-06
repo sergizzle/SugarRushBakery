@@ -8,7 +8,8 @@
 
 #import <Parse/Parse.h>
 #import <UIKit/UIKit.h>
-#import "GalleryViewController.h"
+#import "GallerySelectionViewController.h"
+#import "OrderViewController.h"
 
 @interface ViewController : UIViewController
 

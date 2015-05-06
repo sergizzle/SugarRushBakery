@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[self navigationController] setNavigationBarHidden:NO animated:YES];
     //hide keyboard
     self.usernameField.delegate = self;
     self.passwordField.delegate = self;
