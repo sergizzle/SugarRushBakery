@@ -68,6 +68,7 @@
 		D85E23C11AF4B37600DDDE36 /* ios-background-1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D85E23C01AF4B37600DDDE36 /* ios-background-1x.png */; };
 		D85E23C31AF4BDF500DDDE36 /* ios-background-2x-iphone6.png in Resources */ = {isa = PBXBuildFile; fileRef = D85E23C21AF4BDF500DDDE36 /* ios-background-2x-iphone6.png */; };
 		D85E23C51AF4BFE100DDDE36 /* ios-background-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D85E23C41AF4BFE100DDDE36 /* ios-background-3x.png */; };
+		983F384E1AF605D400157FFA /* GallerySelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 983F384D1AF605D400157FFA /* GallerySelectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +166,8 @@
 		D85E23C01AF4B37600DDDE36 /* ios-background-1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-background-1x.png"; sourceTree = "<group>"; };
 		D85E23C21AF4BDF500DDDE36 /* ios-background-2x-iphone6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-background-2x-iphone6.png"; sourceTree = "<group>"; };
 		D85E23C41AF4BFE100DDDE36 /* ios-background-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-background-3x.png"; sourceTree = "<group>"; };
+		983F384C1AF605D400157FFA /* GallerySelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GallerySelectionViewController.h; sourceTree = "<group>"; };
+		983F384D1AF605D400157FFA /* GallerySelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GallerySelectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +277,8 @@
 				7DA8D3F81AE21C73003D2C91 /* ContactUsViewController.m */,
 				7DA8D4051AE22AE4003D2C91 /* CustomOrderViewController.h */,
 				7DA8D4061AE22AE4003D2C91 /* CustomOrderViewController.m */,
+				983F384C1AF605D400157FFA /* GallerySelectionViewController.h */,
+				983F384D1AF605D400157FFA /* GallerySelectionViewController.m */,
 				7D919D001AEC6DC00067E9CE /* GalleryTableViewCell.h */,
 				7D919D011AEC6DC00067E9CE /* GalleryTableViewCell.m */,
 				7D919CED1AEC59D60067E9CE /* GalleryViewController.h */,
@@ -482,6 +487,7 @@
 				7D9227621AE32FA400A1FE97 /* MyOrdersViewController.m in Sources */,
 				7DA8D3F01AE1FAA0003D2C91 /* SignUpViewController.m in Sources */,
 				7DA8D4041AE22A14003D2C91 /* OrderViewController.m in Sources */,
+				983F384E1AF605D400157FFA /* GallerySelectionViewController.m in Sources */,
 				7DA8D4011AE22631003D2C91 /* OrderManager.m in Sources */,
 				7DA8D3AB1AE1E793003D2C91 /* ViewController.m in Sources */,
 				7D55971B1AEE438B00624505 /* PremadeViewController.m in Sources */,

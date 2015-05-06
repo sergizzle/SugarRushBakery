@@ -19,7 +19,7 @@
 
 
 @implementation CustomOrderViewController
-
+@synthesize image;
 
 
 - (void)viewDidLoad {
@@ -27,8 +27,12 @@
      self.manager = [[OrderManager alloc] init];
     self.descriptionField.delegate = self;
     self.orderTitle.delegate = self;
-  
     
+    if(self.image) {
+        [self.imageView setImage: self.image];
+        self.selectImage.hidden = YES;
+        
+    }
     // Do any additional setup after loading the view.
 }
 
