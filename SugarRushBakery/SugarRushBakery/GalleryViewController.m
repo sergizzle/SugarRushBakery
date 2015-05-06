@@ -70,7 +70,7 @@
     if (cell == nil) {
         cell = [[GalleryTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
-
+    
     cell.cellImage.image = self.arrayToDisplay[indexPath.row];
 
     return cell;
