@@ -1,0 +1,16 @@
+PODS:
+  - Bolts/Tasks (1.1.5)
+  - Parse (1.7.2.1):
+    - Bolts/Tasks (>= 1.1.5)
+  - PayPal-iOS-SDK (2.10.2)
+
+DEPENDENCIES:
+  - Parse
+  - PayPal-iOS-SDK
+
+SPEC CHECKSUMS:
+  Bolts: aac24961496d504aa56fc267cde95162a71bac39
+  Parse: 8213b05b52768b34b87e1e41fd9efc88a9933f3f
+  PayPal-iOS-SDK: 2e7c953fda7bbd05242c748e58a2a2a96a0c18a3
+
+COCOAPODS: 0.37.1
