@@ -63,12 +63,12 @@
 		7DE9C7921AEDBB6D009470DF /* AdminOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE9C7911AEDBB6D009470DF /* AdminOrderViewController.m */; };
 		7DF3EA201AE8ABB60065B513 /* AllOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF3EA1F1AE8ABB60065B513 /* AllOrdersViewController.m */; };
 		7DF3EA231AE8B02D0065B513 /* AllOrdersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF3EA221AE8B02D0065B513 /* AllOrdersTableViewCell.m */; };
+		983F384E1AF605D400157FFA /* GallerySelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 983F384D1AF605D400157FFA /* GallerySelectionViewController.m */; };
 		D85775EB1AF32E5F008B3645 /* cupcake-icon-614x460.png in Resources */ = {isa = PBXBuildFile; fileRef = D85775EA1AF32E5F008B3645 /* cupcake-icon-614x460.png */; };
 		D85E23BF1AF4A91600DDDE36 /* ios-background-2x-web.png in Resources */ = {isa = PBXBuildFile; fileRef = D85E23BE1AF4A91600DDDE36 /* ios-background-2x-web.png */; };
 		D85E23C11AF4B37600DDDE36 /* ios-background-1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D85E23C01AF4B37600DDDE36 /* ios-background-1x.png */; };
 		D85E23C31AF4BDF500DDDE36 /* ios-background-2x-iphone6.png in Resources */ = {isa = PBXBuildFile; fileRef = D85E23C21AF4BDF500DDDE36 /* ios-background-2x-iphone6.png */; };
 		D85E23C51AF4BFE100DDDE36 /* ios-background-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D85E23C41AF4BFE100DDDE36 /* ios-background-3x.png */; };
-		983F384E1AF605D400157FFA /* GallerySelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 983F384D1AF605D400157FFA /* GallerySelectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,13 +161,13 @@
 		7DF3EA1F1AE8ABB60065B513 /* AllOrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllOrdersViewController.m; sourceTree = "<group>"; };
 		7DF3EA211AE8B02D0065B513 /* AllOrdersTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllOrdersTableViewCell.h; sourceTree = "<group>"; };
 		7DF3EA221AE8B02D0065B513 /* AllOrdersTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllOrdersTableViewCell.m; sourceTree = "<group>"; };
+		983F384C1AF605D400157FFA /* GallerySelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GallerySelectionViewController.h; sourceTree = "<group>"; };
+		983F384D1AF605D400157FFA /* GallerySelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GallerySelectionViewController.m; sourceTree = "<group>"; };
 		D85775EA1AF32E5F008B3645 /* cupcake-icon-614x460.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cupcake-icon-614x460.png"; sourceTree = "<group>"; };
 		D85E23BE1AF4A91600DDDE36 /* ios-background-2x-web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-background-2x-web.png"; sourceTree = "<group>"; };
 		D85E23C01AF4B37600DDDE36 /* ios-background-1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-background-1x.png"; sourceTree = "<group>"; };
 		D85E23C21AF4BDF500DDDE36 /* ios-background-2x-iphone6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-background-2x-iphone6.png"; sourceTree = "<group>"; };
 		D85E23C41AF4BFE100DDDE36 /* ios-background-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-background-3x.png"; sourceTree = "<group>"; };
-		983F384C1AF605D400157FFA /* GallerySelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GallerySelectionViewController.h; sourceTree = "<group>"; };
-		983F384D1AF605D400157FFA /* GallerySelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GallerySelectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -615,6 +615,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/parse-library-1.7.1",
@@ -629,6 +630,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/parse-library-1.7.1",
