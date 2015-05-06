@@ -99,9 +99,8 @@
 
 }
 
--(void)viewWillAppear:(BOOL)animated
-{
-
+-(void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
     self.admin.hidden = YES;
     self.currentUserLabel.text = @"";
     self.signOutOutlet.hidden = YES;
@@ -129,8 +128,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 - (IBAction)signOutButton:(id)sender {
     

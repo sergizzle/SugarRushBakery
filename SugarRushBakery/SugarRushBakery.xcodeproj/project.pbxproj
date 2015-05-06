@@ -64,6 +64,10 @@
 		7DF3EA201AE8ABB60065B513 /* AllOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF3EA1F1AE8ABB60065B513 /* AllOrdersViewController.m */; };
 		7DF3EA231AE8B02D0065B513 /* AllOrdersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF3EA221AE8B02D0065B513 /* AllOrdersTableViewCell.m */; };
 		D85775EB1AF32E5F008B3645 /* cupcake-icon-614x460.png in Resources */ = {isa = PBXBuildFile; fileRef = D85775EA1AF32E5F008B3645 /* cupcake-icon-614x460.png */; };
+		D85E23BF1AF4A91600DDDE36 /* ios-background-2x-web.png in Resources */ = {isa = PBXBuildFile; fileRef = D85E23BE1AF4A91600DDDE36 /* ios-background-2x-web.png */; };
+		D85E23C11AF4B37600DDDE36 /* ios-background-1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D85E23C01AF4B37600DDDE36 /* ios-background-1x.png */; };
+		D85E23C31AF4BDF500DDDE36 /* ios-background-2x-iphone6.png in Resources */ = {isa = PBXBuildFile; fileRef = D85E23C21AF4BDF500DDDE36 /* ios-background-2x-iphone6.png */; };
+		D85E23C51AF4BFE100DDDE36 /* ios-background-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D85E23C41AF4BFE100DDDE36 /* ios-background-3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +161,10 @@
 		7DF3EA211AE8B02D0065B513 /* AllOrdersTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllOrdersTableViewCell.h; sourceTree = "<group>"; };
 		7DF3EA221AE8B02D0065B513 /* AllOrdersTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllOrdersTableViewCell.m; sourceTree = "<group>"; };
 		D85775EA1AF32E5F008B3645 /* cupcake-icon-614x460.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cupcake-icon-614x460.png"; sourceTree = "<group>"; };
+		D85E23BE1AF4A91600DDDE36 /* ios-background-2x-web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-background-2x-web.png"; sourceTree = "<group>"; };
+		D85E23C01AF4B37600DDDE36 /* ios-background-1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-background-1x.png"; sourceTree = "<group>"; };
+		D85E23C21AF4BDF500DDDE36 /* ios-background-2x-iphone6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-background-2x-iphone6.png"; sourceTree = "<group>"; };
+		D85E23C41AF4BFE100DDDE36 /* ios-background-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-background-3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -340,7 +348,11 @@
 		D8A5BC521AF3280E00190E8C /* Vector Images */ = {
 			isa = PBXGroup;
 			children = (
+				D85E23C21AF4BDF500DDDE36 /* ios-background-2x-iphone6.png */,
+				D85E23C41AF4BFE100DDDE36 /* ios-background-3x.png */,
+				D85E23C01AF4B37600DDDE36 /* ios-background-1x.png */,
 				D85775EA1AF32E5F008B3645 /* cupcake-icon-614x460.png */,
+				D85E23BE1AF4A91600DDDE36 /* ios-background-2x-web.png */,
 			);
 			name = "Vector Images";
 			sourceTree = "<group>";
@@ -430,7 +442,10 @@
 				7D919CF11AEC5F170067E9CE /* Biscuits in Resources */,
 				7D982F101AE9A59A0073479F /* Icon-40@3x copy.png in Resources */,
 				7D982F111AE9A59A0073479F /* Icon-60@2x copy.png in Resources */,
+				D85E23BF1AF4A91600DDDE36 /* ios-background-2x-web.png in Resources */,
+				D85E23C11AF4B37600DDDE36 /* ios-background-1x.png in Resources */,
 				7D9227671AE3495A00A1FE97 /* Main.storyboard in Resources */,
+				D85E23C51AF4BFE100DDDE36 /* ios-background-3x.png in Resources */,
 				7D982F121AE9A59A0073479F /* Icon-60@3x copy.png in Resources */,
 				7D982F0F1AE9A59A0073479F /* Icon-40@2x copy.png in Resources */,
 				7D919CFF1AEC5F570067E9CE /* Paloma in Resources */,
@@ -443,6 +458,7 @@
 				7DA8D3B31AE1E793003D2C91 /* LaunchScreen.xib in Resources */,
 				7D982F141AE9A59A0073479F /* Icon-Small@3x copy.png in Resources */,
 				7DA8D3B01AE1E793003D2C91 /* Images.xcassets in Resources */,
+				D85E23C31AF4BDF500DDDE36 /* ios-background-2x-iphone6.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
