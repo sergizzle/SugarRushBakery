@@ -9,6 +9,7 @@
 #import <Parse/Parse.h>
 #import "AppDelegate.h"
 #import "Order.h"
+#import "PayPalMobile.h"
 
 @interface AppDelegate ()
 
@@ -24,6 +25,9 @@
     // Initialize Parse.
     [Parse setApplicationId:@"gkvrlxDxdKSXsF0LbndpQUeLaF56gmCiZkr3ck7f"
                   clientKey:@"Ku9UWbBAjIZaDUHiOwhYo5JxxkBpNtoxClPsIpLC"];
+    
+    [PayPalMobile initializeWithClientIdsForEnvironments:@{PayPalEnvironmentProduction : @"ATN-jgJhc0FdSJygAr94IdLyg2PVVYU8hLDOo1Rf_HrQIfvbKpWoBrnQP9nNFhv1xoEuOcubL9V5ghUt",
+                                                           PayPalEnvironmentSandbox : @"ARa5vOXlzgUFtTANRlpHZQ-XW9K7PDo_DptJyEMdKrPf1-qywKInJCsnymFI18PUNmOPuTlPLKg9DJBz"}];
     
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];

@@ -1,0 +1,11 @@
+# Uncomment this line to define a global platform for your project
+platform :ios, '7.0'
+
+target 'SugarRushBakery' do
+  pod 'Parse'
+  pod 'PayPal-iOS-SDK'
+end
+
+target 'SugarRushBakeryTests' do
+
+end
