@@ -85,6 +85,39 @@
         cell.textLabel.text = @"Flowers";
     }
     
+    //create UIImages
+    UIImage *biscuitImage = [UIImage imageNamed:@"biscuit.png"];
+    UIImage *cakepopImage = [UIImage imageNamed:@"cakepop.png"];
+    UIImage *cakeImage = [UIImage imageNamed:@"cake.png"];
+    UIImage *chocolateImage = [UIImage imageNamed:@"chocolate.png"];
+    UIImage *cookieImage = [UIImage imageNamed:@"cookie.png"];
+    UIImage *cupcakeImage = [UIImage imageNamed:@"cupcake.png"];
+    
+    //set the images to each corresponding row
+    switch (indexPath.row) {
+        case 0:
+            cell.imageView.image = biscuitImage;
+            break;
+        case 1:
+            cell.imageView.image = cakepopImage;
+            break;
+        case 2:
+            cell.imageView.image = cakeImage;
+            break;
+        case 3:
+            cell.imageView.image = chocolateImage;
+            break;
+        case 4:
+            cell.imageView.image = cookieImage;
+            break;
+        case 5:
+            cell.imageView.image = cupcakeImage;
+            break;
+            
+        default:
+            break;
+    }
+    
     return cell;
 }
 
