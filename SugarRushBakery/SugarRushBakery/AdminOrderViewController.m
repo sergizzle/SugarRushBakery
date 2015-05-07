@@ -18,18 +18,13 @@
     [super viewDidLoad];
 
     self.priceLabel.text = [NSString stringWithFormat:@"%.2f", self.finalOrder.price];
-    if(!self.finalOrder.verified)
-    {
+    if(!self.finalOrder.verified) {
          self.verified.text = @"No";
     }
-    else{
+    else {
         self.verified.text = @"Yes";
     }
-   
- 
 
-   
-    
     PFFile *file = self.finalOrder.orderImage;
     [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         if(!error) {
@@ -39,11 +34,12 @@
     }];
 
     self.detailsTextView.text = self.finalOrder.descriptions;
-    
-    
-    
    
     self.enterPriceTextField.delegate = self;
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

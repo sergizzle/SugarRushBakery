@@ -18,16 +18,17 @@
     [super viewDidLoad];
     self.manager = [[OrderManager alloc]init];
     if(!self.ordersArray) self.ordersArray = [[NSMutableArray alloc]init];
-    
-    
-    
+
     [self.manager loadOrdersWithCompletionBlock:^(NSArray *objects) {
         
         self.ordersArray = self.manager.orderList;
-        
-        
+
     }];
  
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

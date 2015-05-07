@@ -8,8 +8,9 @@
 
 #import "ViewController.h"
 #import "MyOrdersViewController.h"
+#import "PayPalMobile.h"
 
-@interface OrderInfoViewController : UIViewController
+@interface OrderInfoViewController : UIViewController<PayPalPaymentDelegate>
 
 @property Order *finalOrder;
 @property NSInteger number1;

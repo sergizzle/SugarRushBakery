@@ -25,9 +25,9 @@
 }
 
 
--(void)viewWillAppear:(BOOL)animated
-{
+- (void)viewWillAppear:(BOOL)animated {
     self.automaticallyAdjustsScrollViewInsets = NO;
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
     [self.ordersTable reloadData];
 }
 
