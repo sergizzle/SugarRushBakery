@@ -96,7 +96,7 @@
                             if (succeeded){
                                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success"
                                                                                 message:@"Order has been cancelled."
-                                                                               delegate:self
+                                                                               delegate:nil
                                                                       cancelButtonTitle:@"Ok"
                                                                       otherButtonTitles:nil];
                                 
@@ -140,9 +140,9 @@
     NSDecimalNumber *numba = (NSDecimalNumber *) [NSDecimalNumber numberWithDouble:self.finalOrder.price];
     
     // Amount, currency, and description
-    payment.amount = numba;//[[NSDecimalNumber alloc] initWithString:@"39.95"];
+    payment.amount = numba;
     payment.currencyCode = @"USD";
-    payment.shortDescription = self.finalOrder.orderTitle;//@"Awesome saws";
+    payment.shortDescription = self.finalOrder.orderTitle;
     
     // Use the intent property to indicate that this is a "sale" payment,
     // meaning combined Authorization + Capture.
@@ -164,6 +164,13 @@
     if (!payment.processable) {
         // If, for example, the amount was negative or the shortDescription was empty, then
         // this payment would not be processable. You would want to handle that here.
+        
+        UIAlertView *notProcessable = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                          message:@"Order could not be processed."
+                                                         delegate:self
+                                                cancelButtonTitle:@"Ok"
+                                                otherButtonTitles:nil];
+        [notProcessable show];
     }
     
     PayPalPaymentViewController *paymentViewController;
@@ -196,8 +203,21 @@
     // Payment was processed successfully; send to server for verification and fulfillment.
     [self verifyCompletedPayment:completedPayment];
     
+    //Update bool paidFor in parse
+    PFQuery *query = [PFQuery queryWithClassName:@"Order"];
+    [query getObjectInBackgroundWithId:self.finalOrder.objectId block:^(PFObject *order, NSError *error) {
+        // Do something with the returned PFObject
+        
+            order[@"paidFor"] = @YES;
+        [order saveInBackground];
+        
+    }];
+    
     // Dismiss the PayPalPaymentViewController.
     [self dismissViewControllerAnimated:YES completion:nil];
+    //[self.navigationController popToRootViewControllerAnimated:YES];
+
+    
 }
 
 - (void)payPalPaymentDidCancel:(PayPalPaymentViewController *)paymentViewController {

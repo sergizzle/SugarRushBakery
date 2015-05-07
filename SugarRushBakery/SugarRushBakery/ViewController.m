@@ -16,7 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     [self viewWillAppear:YES];
     
     //BISCUITS
@@ -162,6 +161,7 @@
 }
 
 - (IBAction)AboutUsButton:(id)sender {
+    [self   performSegueWithIdentifier:@"aboutUs" sender:self];
 }
 
 - (IBAction)OrdersButton:(id)sender {

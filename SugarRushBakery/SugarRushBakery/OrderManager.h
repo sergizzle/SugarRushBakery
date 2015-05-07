@@ -16,7 +16,7 @@
 
 -(void)loadOrdersWithCompletionBlock:(void (^)(NSArray *objects))callbackBlock;
 
--(void)addOrderswithDate:(NSDate *)date andDescription:(NSString *)descriptions andVerified:(BOOL)verified andPrice:(double)price andImage:(PFFile*)orderImage andOrderType:(orderType)orderType andOrderTitle:(NSString *)orderTitle;
+-(void)addOrderswithDate:(NSDate *)date andDescription:(NSString *)descriptions andVerified:(BOOL)verified andPrice:(double)price andImage:(PFFile*)orderImage andOrderTitle:(NSString *)orderTitle;
 
 
 @end

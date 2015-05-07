@@ -55,7 +55,10 @@
    // [order fetchIfNeeded];
     PFFile *file = order.orderImage;
     
-
+    if( order.paidFor)
+    {
+        cell.backgroundColor = [UIColor redColor];
+    }
     
 
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];

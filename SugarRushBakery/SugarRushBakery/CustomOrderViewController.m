@@ -151,6 +151,16 @@
         [noImage show];
     }
     
+    else if(!(self.orderTitle.text && self.orderTitle.text.length > 0))
+    {
+        UIAlertView *noTitle = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                          message:@"Please enter an order title."
+                                                         delegate:self
+                                                cancelButtonTitle:@"Ok"
+                                                otherButtonTitles:nil];
+        [noTitle show];
+    }
+    
     else
     {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Confirm"
@@ -180,7 +190,7 @@
         PFFile *orderImage =[PFFile fileWithName:@"OrderImage" data:imageData];
         
         
-        [self.manager addOrderswithDate:pickerDate andDescription:tempString andVerified:NO andPrice:0 andImage:orderImage andOrderType:0 andOrderTitle:ordertitle];
+        [self.manager addOrderswithDate:pickerDate andDescription:tempString andVerified:NO andPrice:0 andImage:orderImage andOrderTitle:ordertitle];
   
          [self.navigationController popToRootViewControllerAnimated:YES];
 

@@ -83,6 +83,11 @@
         {
             cell.isVerifiedLabel.text = @"Processed";
         }
+    
+        if(order.paidFor)
+        {
+            cell.isVerifiedLabel.text = @"Paid For";
+        }
         
         [cell setNeedsDisplay];
  //   });

@@ -8,16 +8,9 @@
 
 #import <Parse/Parse.h>
 
-
-typedef enum{
-    custom,
-    defined
-} orderType;
-
 @interface Order : PFObject <PFSubclassing>
 
 
-@property orderType OrderType;
 @property NSString *descriptions;
 @property BOOL verified;
 @property double price;
@@ -27,5 +20,7 @@ typedef enum{
 @property NSString *userID;
 @property NSString *userName;
 @property NSString *email;
+@property BOOL paidFor;
+@property BOOL orderComplete;
 
 @end

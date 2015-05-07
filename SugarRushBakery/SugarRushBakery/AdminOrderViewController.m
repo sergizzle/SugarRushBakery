@@ -135,21 +135,83 @@
 }
 
 - (IBAction)verifyOrderButton:(id)sender {
-    if(!self.finalOrder.verified)
+    
+    if(self.finalOrder.price == 0)
     {
-        self.finalOrder.verified = YES;
-        self.verified.text = @"Yes";
+        UIAlertView *zeroPrice = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                            message:@"Please set a price more than 0$."
+                                                           delegate:self
+                                                  cancelButtonTitle:@"Ok"
+                                                  otherButtonTitles:nil];
+        [zeroPrice show];
     }
-    else{
-        self.finalOrder.verified = NO;
-        self.verified.text = @"No";
+    
+    else
+    {
+        if(!self.finalOrder.verified)
+        {
+            self.finalOrder.verified = YES;
+            self.verified.text = @"Yes";
+        }
+        else{
+            self.finalOrder.verified = NO;
+            self.verified.text = @"No";
+        }
+        
+        PFQuery *query = [PFQuery queryWithClassName:@"Order"];
+        [query getObjectInBackgroundWithId:self.finalOrder.objectId block:^(PFObject *order, NSError *error) {
+            // Do something with the returned PFObject
+            
+            if(self.finalOrder.verified)
+            {
+                order[@"verified"] = @YES;
+            }
+            else{
+                order[@"verified"]= @NO;
+            }
+            
+           
+            [order saveInBackground];
+            
+        }];
     }
+    
+    
+   
    
     
 }
 - (IBAction)setPriceButton:(id)sender {
-    self.finalOrder.price = self.enterPriceTextField.text.doubleValue;
-    self.priceLabel.text = [NSString stringWithFormat:@"%.2f", self.finalOrder.price];
+    
+    
+    if(!(self.enterPriceTextField.text && self.enterPriceTextField.text.length > 0) || self.enterPriceTextField.text.doubleValue == 0)
+    {
+        UIAlertView *zeroPrice = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                            message:@"Please set a price more than 0$."
+                                                           delegate:self
+                                                  cancelButtonTitle:@"Ok"
+                                                  otherButtonTitles:nil];
+        [zeroPrice show];
+    }
+    
+    else
+    {
+        PFQuery *query = [PFQuery queryWithClassName:@"Order"];
+        [query getObjectInBackgroundWithId:self.finalOrder.objectId block:^(PFObject *order, NSError *error) {
+            // Do something with the returned PFObject
+            
+            
+            NSNumber *aNumber = [NSNumber numberWithDouble:self.finalOrder.price];
+            
+            order[@"Price"] = aNumber;
+            [order saveInBackground];
+            self.finalOrder.price = self.enterPriceTextField.text.doubleValue;
+            self.priceLabel.text = [NSString stringWithFormat:@"%.2f", self.finalOrder.price];
+            
+        }];
+    }
+    
+    
 
 }
 
@@ -206,28 +268,45 @@
     
 }
 
-- (IBAction)saveButton:(id)sender {
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"Order"];
-    [query getObjectInBackgroundWithId:self.finalOrder.objectId block:^(PFObject *order, NSError *error) {
-        // Do something with the returned PFObject in the gameScore variable.
-      
-        if(self.finalOrder.verified)
-        {
-            order[@"verified"] = @YES;
-        }
-        else{
-            order[@"verified"]= @NO;
-        }
-        
-        NSNumber *aNumber = [NSNumber numberWithDouble:self.finalOrder.price];
 
-        order[@"Price"] = aNumber;
-        [order saveInBackground];
-        
-    }];
-    
-}
+//Not using this most likely
+//- (IBAction)saveButton:(id)sender {
+//    
+//    
+//    //THIS IF STATEMENT IS BROKEN
+//    if(self.finalOrder.price == 0)
+//    {
+//        UIAlertView *zeroPrice = [[UIAlertView alloc] initWithTitle:@"Error"
+//                                                          message:@"Please set a price more than 0$."
+//                                                         delegate:self
+//                                                cancelButtonTitle:@"Ok"
+//                                                otherButtonTitles:nil];
+//        [zeroPrice show];
+//    }
+//    
+//    else
+//    {
+//    PFQuery *query = [PFQuery queryWithClassName:@"Order"];
+//    [query getObjectInBackgroundWithId:self.finalOrder.objectId block:^(PFObject *order, NSError *error) {
+//        // Do something with the returned PFObject
+//      
+//        if(self.finalOrder.verified)
+//        {
+//            order[@"verified"] = @YES;
+//        }
+//        else{
+//            order[@"verified"]= @NO;
+//        }
+//        
+//        NSNumber *aNumber = [NSNumber numberWithDouble:self.finalOrder.price];
+//
+//        order[@"Price"] = aNumber;
+//        [order saveInBackground];
+//        
+//    }];
+//    }
+//    
+//}
 
 
  #pragma mark - Navigation

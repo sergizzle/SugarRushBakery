@@ -12,7 +12,6 @@
 
 @dynamic verified;
 @dynamic descriptions;
-@dynamic OrderType;
 @dynamic price;
 @dynamic dueDate;
 @dynamic orderImage;
@@ -20,6 +19,8 @@
 @dynamic userID;
 @dynamic userName;
 @dynamic email;
+@dynamic paidFor;
+@dynamic orderComplete;
 
 + (NSString *)parseClassName {
     return @"Order";

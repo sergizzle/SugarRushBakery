@@ -10,6 +10,7 @@
 		6C0A341E8A4C20AE54A59556 /* libPods-SugarRushBakery.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B5C5965D1D84DD93F244B2 /* libPods-SugarRushBakery.a */; };
 		7D5525D11AE8869A007030A5 /* OrderInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5525D01AE8869A007030A5 /* OrderInfoViewController.m */; };
 		7D55971B1AEE438B00624505 /* PremadeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D55971A1AEE438B00624505 /* PremadeViewController.m */; };
+		7D62398B1AFB319D008BF2FA /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D62398A1AFB319D008BF2FA /* AboutUsViewController.m */; };
 		7D919CEF1AEC59D60067E9CE /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D919CEE1AEC59D60067E9CE /* GalleryViewController.m */; };
 		7D919CF11AEC5F170067E9CE /* Biscuits in Resources */ = {isa = PBXBuildFile; fileRef = 7D919CF01AEC5F170067E9CE /* Biscuits */; };
 		7D919CF31AEC5F260067E9CE /* Cakepops in Resources */ = {isa = PBXBuildFile; fileRef = 7D919CF21AEC5F260067E9CE /* Cakepops */; };
@@ -91,6 +92,8 @@
 		7D5525D01AE8869A007030A5 /* OrderInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderInfoViewController.m; sourceTree = "<group>"; };
 		7D5597191AEE438B00624505 /* PremadeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PremadeViewController.h; sourceTree = "<group>"; };
 		7D55971A1AEE438B00624505 /* PremadeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PremadeViewController.m; sourceTree = "<group>"; };
+		7D6239891AFB319D008BF2FA /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
+		7D62398A1AFB319D008BF2FA /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
 		7D919CED1AEC59D60067E9CE /* GalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryViewController.h; sourceTree = "<group>"; };
 		7D919CEE1AEC59D60067E9CE /* GalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryViewController.m; sourceTree = "<group>"; };
 		7D919CF01AEC5F170067E9CE /* Biscuits */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Biscuits; sourceTree = "<group>"; };
@@ -275,6 +278,8 @@
 			children = (
 				D8A5BC521AF3280E00190E8C /* Vector Images */,
 				7D9227661AE3495A00A1FE97 /* Main.storyboard */,
+				7D6239891AFB319D008BF2FA /* AboutUsViewController.h */,
+				7D62398A1AFB319D008BF2FA /* AboutUsViewController.m */,
 				7DE9C7901AEDBB6D009470DF /* AdminOrderViewController.h */,
 				7DE9C7911AEDBB6D009470DF /* AdminOrderViewController.m */,
 				7DF3EA211AE8B02D0065B513 /* AllOrdersTableViewCell.h */,
@@ -558,6 +563,7 @@
 				7DA8D3A51AE1E793003D2C91 /* main.m in Sources */,
 				7D5525D11AE8869A007030A5 /* OrderInfoViewController.m in Sources */,
 				7D9227651AE334B600A1FE97 /* MyOrdersTableViewCell.m in Sources */,
+				7D62398B1AFB319D008BF2FA /* AboutUsViewController.m in Sources */,
 				7DA8D3F91AE21C73003D2C91 /* ContactUsViewController.m in Sources */,
 				7D919D021AEC6DC00067E9CE /* GalleryTableViewCell.m in Sources */,
 				7D919CEF1AEC59D60067E9CE /* GalleryViewController.m in Sources */,
@@ -680,6 +686,7 @@
 				INFOPLIST_FILE = SugarRushBakery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -693,6 +700,7 @@
 				INFOPLIST_FILE = SugarRushBakery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

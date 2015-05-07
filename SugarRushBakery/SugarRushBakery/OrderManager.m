@@ -42,16 +42,17 @@
 }
 
 
--(void)addOrderswithDate:(NSDate *)date andDescription:(NSString *)descriptions andVerified:(BOOL)verified andPrice:(double)price andImage:(PFFile*)orderImage andOrderType:(orderType) orderType andOrderTitle:(NSString *)orderTitle
+-(void)addOrderswithDate:(NSDate *)date andDescription:(NSString *)descriptions andVerified:(BOOL)verified andPrice:(double)price andImage:(PFFile*)orderImage andOrderTitle:(NSString *)orderTitle
 {
     Order *toAdd = [Order object];
     toAdd.dueDate = date;
     toAdd.descriptions = descriptions;
     toAdd.price = price;
-    toAdd.verified = verified;
+    toAdd.verified = NO;
     toAdd.orderImage = orderImage;
-    toAdd.OrderType = orderType;
     toAdd.orderTitle = orderTitle;
+    toAdd.paidFor = NO;
+    toAdd.orderComplete = NO;
 
     PFUser *currentUser = [PFUser currentUser];
     toAdd.userID = currentUser.objectId;
@@ -68,7 +69,7 @@
     
     UIAlertView *confirmed = [[UIAlertView alloc] initWithTitle:@"Congratulations"
                                                         message:@"Your order has been placed."
-                                                       delegate:self
+                                                       delegate:nil
                                               cancelButtonTitle:@"Ok"
                                               otherButtonTitles:nil];
     [confirmed show];

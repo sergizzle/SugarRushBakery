@@ -43,7 +43,28 @@
 
 
 - (IBAction)orderButton:(id)sender {
-    [self performSegueWithIdentifier:@"premadeToCustom" sender:self];
+    if(![PFUser currentUser])
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                        message:@"You must first sign in."
+                                                       delegate:self
+                                              cancelButtonTitle:@"Cancel"
+                                              otherButtonTitles:@"Sign In", nil];
+        [alert show];
+    }
+    else
+    {
+        [self performSegueWithIdentifier:@"premadeToCustom" sender:self];
+    }
+}
+
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    // the user clicked OK
+    if (buttonIndex == 1) {
+        [self   performSegueWithIdentifier:@"signin" sender:self];
+        
+    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
