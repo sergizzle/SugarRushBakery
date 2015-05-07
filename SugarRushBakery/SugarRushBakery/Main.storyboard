@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XWH-65-CzQ">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -996,7 +996,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="selectionCell" rowHeight="48" id="ze3-45-QWt">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="selectionCell" rowHeight="48" id="ze3-45-QWt">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ze3-45-QWt" id="jq8-Nk-7ER">
@@ -1005,28 +1005,37 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="64" width="400" height="536"/>
+                                    <rect key="frame" x="0.0" y="266" width="376" height="334"/>
                                 </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="eAe-Xq-lvH" id="VVX-Hf-eam"/>
                                     <outlet property="delegate" destination="eAe-Xq-lvH" id="Q1M-NS-cH3"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hOz-tf-5PP">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="105" y="68" width="190" height="190"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="gxI-en-pKl"/>
+                                <exclude reference="hOz-tf-5PP"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="gxI-en-pKl"/>
+                                <include reference="hOz-tf-5PP"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="lBP-Au-9IT"/>
                     <connections>
+                        <outlet property="imageView" destination="hOz-tf-5PP" id="Z7l-YV-Jde"/>
                         <outlet property="tableView" destination="gxI-en-pKl" id="8m4-Qf-vWz"/>
                         <segue destination="u2l-7t-npx" kind="push" identifier="gallerySelected" id="LcP-y5-FUX"/>
                     </connections>

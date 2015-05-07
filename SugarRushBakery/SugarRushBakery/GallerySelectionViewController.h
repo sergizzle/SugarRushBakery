@@ -19,5 +19,6 @@
 @property NSMutableArray *flowerImages;
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
