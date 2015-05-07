@@ -59,6 +59,8 @@
 		7DF3EA201AE8ABB60065B513 /* AllOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF3EA1F1AE8ABB60065B513 /* AllOrdersViewController.m */; };
 		7DF3EA231AE8B02D0065B513 /* AllOrdersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF3EA221AE8B02D0065B513 /* AllOrdersTableViewCell.m */; };
 		983F384E1AF605D400157FFA /* GallerySelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 983F384D1AF605D400157FFA /* GallerySelectionViewController.m */; };
+		985026C41AFAF7A700D6CB60 /* flower.png in Resources */ = {isa = PBXBuildFile; fileRef = 985026C31AFAF7A700D6CB60 /* flower.png */; };
+		985026C61AFB0BC400D6CB60 /* arrow-10-512 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 985026C51AFB0BC400D6CB60 /* arrow-10-512 copy.png */; };
 		986953A71AF9FCC500F13FF5 /* cake.png in Resources */ = {isa = PBXBuildFile; fileRef = 986953A61AF9FCC500F13FF5 /* cake.png */; };
 		986953AB1AF9FCD800F13FF5 /* cakepop.png in Resources */ = {isa = PBXBuildFile; fileRef = 986953AA1AF9FCD800F13FF5 /* cakepop.png */; };
 		986953AD1AF9FCE100F13FF5 /* chocolate.png in Resources */ = {isa = PBXBuildFile; fileRef = 986953AC1AF9FCE100F13FF5 /* chocolate.png */; };
@@ -160,6 +162,8 @@
 		7DF3EA221AE8B02D0065B513 /* AllOrdersTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllOrdersTableViewCell.m; sourceTree = "<group>"; };
 		983F384C1AF605D400157FFA /* GallerySelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GallerySelectionViewController.h; sourceTree = "<group>"; };
 		983F384D1AF605D400157FFA /* GallerySelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GallerySelectionViewController.m; sourceTree = "<group>"; };
+		985026C31AFAF7A700D6CB60 /* flower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flower.png; sourceTree = "<group>"; };
+		985026C51AFB0BC400D6CB60 /* arrow-10-512 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-10-512 copy.png"; sourceTree = "<group>"; };
 		986953A61AF9FCC500F13FF5 /* cake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cake.png; sourceTree = "<group>"; };
 		986953AA1AF9FCD800F13FF5 /* cakepop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cakepop.png; sourceTree = "<group>"; };
 		986953AC1AF9FCE100F13FF5 /* chocolate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chocolate.png; sourceTree = "<group>"; };
@@ -353,12 +357,14 @@
 				D85E23C01AF4B37600DDDE36 /* ios-background-1x.png */,
 				D85775EA1AF32E5F008B3645 /* cupcake-icon-614x460.png */,
 				D85E23BE1AF4A91600DDDE36 /* ios-background-2x-web.png */,
+				985026C51AFB0BC400D6CB60 /* arrow-10-512 copy.png */,
 				986953B41AFA059300F13FF5 /* biscuit.png */,
 				986953AA1AF9FCD800F13FF5 /* cakepop.png */,
 				986953A61AF9FCC500F13FF5 /* cake.png */,
 				986953AC1AF9FCE100F13FF5 /* chocolate.png */,
 				986953AE1AF9FCE800F13FF5 /* cookie.png */,
 				986953B01AF9FCEC00F13FF5 /* cupcake.png */,
+				985026C31AFAF7A700D6CB60 /* flower.png */,
 			);
 			name = "Vector Images";
 			sourceTree = "<group>";
@@ -458,6 +464,7 @@
 				986953AB1AF9FCD800F13FF5 /* cakepop.png in Resources */,
 				7D919CF51AEC5F2F0067E9CE /* Cakes in Resources */,
 				7D919CF11AEC5F170067E9CE /* Biscuits in Resources */,
+				985026C41AFAF7A700D6CB60 /* flower.png in Resources */,
 				7D982F101AE9A59A0073479F /* Icon-40@3x copy.png in Resources */,
 				7D982F111AE9A59A0073479F /* Icon-60@2x copy.png in Resources */,
 				D85E23BF1AF4A91600DDDE36 /* ios-background-2x-web.png in Resources */,
@@ -468,6 +475,7 @@
 				7D982F121AE9A59A0073479F /* Icon-60@3x copy.png in Resources */,
 				7D982F0F1AE9A59A0073479F /* Icon-40@2x copy.png in Resources */,
 				7D919CFF1AEC5F570067E9CE /* Paloma in Resources */,
+				985026C61AFB0BC400D6CB60 /* arrow-10-512 copy.png in Resources */,
 				986953B11AF9FCEC00F13FF5 /* cupcake.png in Resources */,
 				7D919CF71AEC5F370067E9CE /* Chocolate in Resources */,
 				7D919CF31AEC5F260067E9CE /* Cakepops in Resources */,
